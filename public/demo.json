@@ -1,0 +1,2504 @@
+{
+    "children": [{
+        "children": [{
+            "children": [{
+                "children": [{
+                    "children": [{
+                        "children": [{
+                            "count": 12,
+                            "rank": "genus",
+                            "confidence": "0.15",
+                            "name": "Caldisericum",
+                            "lineage": {
+                                "phylum": "Caldiserica",
+                                "class": "Caldisericia",
+                                "domain": "Bacteria",
+                                "order": "Caldisericales",
+                                "family": "Caldisericaceae",
+                                "norank": "Root",
+                                "genus": "Caldisericum"
+                            }
+                        }],
+                        "count": 12,
+                        "rank": "family",
+                        "confidence": "0.15",
+                        "name": "Caldisericaceae",
+                        "lineage": {
+                            "phylum": "Caldiserica",
+                            "class": "Caldisericia",
+                            "domain": "Bacteria",
+                            "order": "Caldisericales",
+                            "family": "Caldisericaceae",
+                            "norank": "Root",
+                            "genus": "Caldisericum"
+                        }
+                    }],
+                    "count": 12,
+                    "rank": "order",
+                    "confidence": "0.15",
+                    "name": "Caldisericales",
+                    "lineage": {
+                        "phylum": "Caldiserica",
+                        "class": "Caldisericia",
+                        "domain": "Bacteria",
+                        "order": "Caldisericales",
+                        "family": "Caldisericaceae",
+                        "norank": "Root",
+                        "genus": "Caldisericum"
+                    }
+                }],
+                "count": 12,
+                "rank": "class",
+                "confidence": "0.15",
+                "name": "Caldisericia",
+                "lineage": {
+                    "phylum": "Caldiserica",
+                    "class": "Caldisericia",
+                    "domain": "Bacteria",
+                    "order": "Caldisericales",
+                    "family": "Caldisericaceae",
+                    "norank": "Root",
+                    "genus": "Caldisericum"
+                }
+            }],
+            "count": 12,
+            "rank": "phylum",
+            "confidence": "0.15",
+            "name": "Caldiserica",
+            "lineage": {
+                "phylum": "Caldiserica",
+                "class": "Caldisericia",
+                "domain": "Bacteria",
+                "order": "Caldisericales",
+                "family": "Caldisericaceae",
+                "norank": "Root",
+                "genus": "Caldisericum"
+            }
+        }, {
+            "children": [{
+                "children": [{
+                    "children": [{
+                        "children": [{
+                            "count": 25,
+                            "rank": "genus",
+                            "confidence": "0.94",
+                            "name": "Desulfocapsa",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Deltaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Desulfobacterales",
+                                "family": "Desulfobulbaceae",
+                                "norank": "Root",
+                                "genus": "Desulfocapsa"
+                            }
+                        }, {
+                            "count": 4,
+                            "rank": "genus",
+                            "confidence": "0.48",
+                            "name": "Desulforhopalus",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Deltaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Desulfobacterales",
+                                "family": "Desulfobulbaceae",
+                                "norank": "Root",
+                                "genus": "Desulforhopalus"
+                            }
+                        }, {
+                            "count": 4,
+                            "rank": "genus",
+                            "confidence": "1.0",
+                            "name": "Desulfurivibrio",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Deltaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Desulfobacterales",
+                                "family": "Desulfobulbaceae",
+                                "norank": "Root",
+                                "genus": "Desulfurivibrio"
+                            }
+                        }],
+                        "count": 33,
+                        "rank": "family",
+                        "confidence": "1.0",
+                        "name": "Desulfobulbaceae",
+                        "lineage": {
+                            "phylum": "Proteobacteria",
+                            "class": "Deltaproteobacteria",
+                            "domain": "Bacteria",
+                            "order": "Desulfobacterales",
+                            "family": "Desulfobulbaceae",
+                            "norank": "Root",
+                            "genus": "Desulfocapsa"
+                        }
+                    }, {
+                        "children": [{
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "0.16",
+                            "name": "Desulfatirhabdium",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Deltaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Desulfobacterales",
+                                "family": "Desulfobacteraceae",
+                                "norank": "Root",
+                                "genus": "Desulfatirhabdium"
+                            }
+                        }, {
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "0.3",
+                            "name": "Desulfocella",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Deltaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Desulfobacterales",
+                                "family": "Desulfobacteraceae",
+                                "norank": "Root",
+                                "genus": "Desulfocella"
+                            }
+                        }],
+                        "count": 2,
+                        "rank": "family",
+                        "confidence": "0.21",
+                        "name": "Desulfobacteraceae",
+                        "lineage": {
+                            "phylum": "Proteobacteria",
+                            "class": "Deltaproteobacteria",
+                            "domain": "Bacteria",
+                            "order": "Desulfobacterales",
+                            "family": "Desulfobacteraceae",
+                            "norank": "Root",
+                            "genus": "Desulfatirhabdium"
+                        }
+                    }],
+                    "count": 35,
+                    "rank": "order",
+                    "confidence": "1.0",
+                    "name": "Desulfobacterales",
+                    "lineage": {
+                        "phylum": "Proteobacteria",
+                        "class": "Deltaproteobacteria",
+                        "domain": "Bacteria",
+                        "order": "Desulfobacterales",
+                        "family": "Desulfobulbaceae",
+                        "norank": "Root",
+                        "genus": "Desulfocapsa"
+                    }
+                }, {
+                    "children": [{
+                        "count": 1,
+                        "rank": "genus",
+                        "confidence": "1.0",
+                        "name": "Syntrophorhabdus",
+                        "lineage": {
+                            "phylum": "Proteobacteria",
+                            "class": "Deltaproteobacteria",
+                            "domain": "Bacteria",
+                            "family": "Syntrophorhabdaceae",
+                            "norank": "Root",
+                            "genus": "Syntrophorhabdus"
+                        }
+                    }],
+                    "count": 1,
+                    "rank": "family",
+                    "confidence": "1.0",
+                    "name": "Syntrophorhabdaceae",
+                    "lineage": {
+                        "phylum": "Proteobacteria",
+                        "class": "Deltaproteobacteria",
+                        "domain": "Bacteria",
+                        "family": "Syntrophorhabdaceae",
+                        "norank": "Root",
+                        "genus": "Syntrophorhabdus"
+                    }
+                }, {
+                    "children": [{
+                        "children": [{
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "0.13",
+                            "name": "Hippea",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Deltaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Desulfurellales",
+                                "family": "Desulfurellaceae",
+                                "norank": "Root",
+                                "genus": "Hippea"
+                            }
+                        }],
+                        "count": 1,
+                        "rank": "family",
+                        "confidence": "0.13",
+                        "name": "Desulfurellaceae",
+                        "lineage": {
+                            "phylum": "Proteobacteria",
+                            "class": "Deltaproteobacteria",
+                            "domain": "Bacteria",
+                            "order": "Desulfurellales",
+                            "family": "Desulfurellaceae",
+                            "norank": "Root",
+                            "genus": "Hippea"
+                        }
+                    }],
+                    "count": 1,
+                    "rank": "order",
+                    "confidence": "0.13",
+                    "name": "Desulfurellales",
+                    "lineage": {
+                        "phylum": "Proteobacteria",
+                        "class": "Deltaproteobacteria",
+                        "domain": "Bacteria",
+                        "order": "Desulfurellales",
+                        "family": "Desulfurellaceae",
+                        "norank": "Root",
+                        "genus": "Hippea"
+                    }
+                }, {
+                    "children": [{
+                        "children": [{
+                            "children": [{
+                                "count": 1,
+                                "rank": "genus",
+                                "confidence": "0.08",
+                                "name": "Hyalangium",
+                                "lineage": {
+                                    "phylum": "Proteobacteria",
+                                    "class": "Deltaproteobacteria",
+                                    "domain": "Bacteria",
+                                    "order": "Myxococcales",
+                                    "family": "Cystobacteraceae",
+                                    "norank": "Root",
+                                    "genus": "Hyalangium",
+                                    "suborder": "Cystobacterineae"
+                                }
+                            }],
+                            "count": 1,
+                            "rank": "family",
+                            "confidence": "0.15",
+                            "name": "Cystobacteraceae",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Deltaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Myxococcales",
+                                "family": "Cystobacteraceae",
+                                "norank": "Root",
+                                "genus": "Hyalangium",
+                                "suborder": "Cystobacterineae"
+                            }
+                        }],
+                        "count": 1,
+                        "rank": "suborder",
+                        "confidence": "0.17",
+                        "name": "Cystobacterineae",
+                        "lineage": {
+                            "phylum": "Proteobacteria",
+                            "class": "Deltaproteobacteria",
+                            "domain": "Bacteria",
+                            "order": "Myxococcales",
+                            "family": "Cystobacteraceae",
+                            "norank": "Root",
+                            "genus": "Hyalangium",
+                            "suborder": "Cystobacterineae"
+                        }
+                    }, {
+                        "children": [{
+                            "children": [{
+                                "count": 1,
+                                "rank": "genus",
+                                "confidence": "0.1",
+                                "name": "Sorangium",
+                                "lineage": {
+                                    "phylum": "Proteobacteria",
+                                    "class": "Deltaproteobacteria",
+                                    "domain": "Bacteria",
+                                    "order": "Myxococcales",
+                                    "family": "Polyangiaceae",
+                                    "norank": "Root",
+                                    "genus": "Sorangium",
+                                    "suborder": "Sorangiineae"
+                                }
+                            }],
+                            "count": 1,
+                            "rank": "family",
+                            "confidence": "0.11",
+                            "name": "Polyangiaceae",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Deltaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Myxococcales",
+                                "family": "Polyangiaceae",
+                                "norank": "Root",
+                                "genus": "Sorangium",
+                                "suborder": "Sorangiineae"
+                            }
+                        }],
+                        "count": 1,
+                        "rank": "suborder",
+                        "confidence": "0.11",
+                        "name": "Sorangiineae",
+                        "lineage": {
+                            "phylum": "Proteobacteria",
+                            "class": "Deltaproteobacteria",
+                            "domain": "Bacteria",
+                            "order": "Myxococcales",
+                            "family": "Polyangiaceae",
+                            "norank": "Root",
+                            "genus": "Sorangium",
+                            "suborder": "Sorangiineae"
+                        }
+                    }],
+                    "count": 2,
+                    "rank": "order",
+                    "confidence": "0.36",
+                    "name": "Myxococcales",
+                    "lineage": {
+                        "phylum": "Proteobacteria",
+                        "class": "Deltaproteobacteria",
+                        "domain": "Bacteria",
+                        "order": "Myxococcales",
+                        "family": "Cystobacteraceae",
+                        "norank": "Root",
+                        "genus": "Hyalangium",
+                        "suborder": "Cystobacterineae"
+                    }
+                }, {
+                    "children": [{
+                        "children": [{
+                            "count": 4,
+                            "rank": "genus",
+                            "confidence": "1.0",
+                            "name": "Geobacter",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Deltaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Desulfuromonadales",
+                                "family": "Geobacteraceae",
+                                "norank": "Root",
+                                "genus": "Geobacter"
+                            }
+                        }],
+                        "count": 4,
+                        "rank": "family",
+                        "confidence": "1.0",
+                        "name": "Geobacteraceae",
+                        "lineage": {
+                            "phylum": "Proteobacteria",
+                            "class": "Deltaproteobacteria",
+                            "domain": "Bacteria",
+                            "order": "Desulfuromonadales",
+                            "family": "Geobacteraceae",
+                            "norank": "Root",
+                            "genus": "Geobacter"
+                        }
+                    }],
+                    "count": 4,
+                    "rank": "order",
+                    "confidence": "1.0",
+                    "name": "Desulfuromonadales",
+                    "lineage": {
+                        "phylum": "Proteobacteria",
+                        "class": "Deltaproteobacteria",
+                        "domain": "Bacteria",
+                        "order": "Desulfuromonadales",
+                        "family": "Geobacteraceae",
+                        "norank": "Root",
+                        "genus": "Geobacter"
+                    }
+                }, {
+                    "children": [{
+                        "children": [{
+                            "count": 3,
+                            "rank": "genus",
+                            "confidence": "0.56",
+                            "name": "Desulfovirga",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Deltaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Syntrophobacterales",
+                                "family": "Syntrophobacteraceae",
+                                "norank": "Root",
+                                "genus": "Desulfovirga"
+                            }
+                        }],
+                        "count": 3,
+                        "rank": "family",
+                        "confidence": "0.76",
+                        "name": "Syntrophobacteraceae",
+                        "lineage": {
+                            "phylum": "Proteobacteria",
+                            "class": "Deltaproteobacteria",
+                            "domain": "Bacteria",
+                            "order": "Syntrophobacterales",
+                            "family": "Syntrophobacteraceae",
+                            "norank": "Root",
+                            "genus": "Desulfovirga"
+                        }
+                    }],
+                    "count": 3,
+                    "rank": "order",
+                    "confidence": "0.77",
+                    "name": "Syntrophobacterales",
+                    "lineage": {
+                        "phylum": "Proteobacteria",
+                        "class": "Deltaproteobacteria",
+                        "domain": "Bacteria",
+                        "order": "Syntrophobacterales",
+                        "family": "Syntrophobacteraceae",
+                        "norank": "Root",
+                        "genus": "Desulfovirga"
+                    }
+                }],
+                "count": 46,
+                "rank": "class",
+                "confidence": "1.0",
+                "name": "Deltaproteobacteria",
+                "lineage": {
+                    "phylum": "Proteobacteria",
+                    "class": "Deltaproteobacteria",
+                    "domain": "Bacteria",
+                    "order": "Desulfobacterales",
+                    "family": "Desulfobulbaceae",
+                    "norank": "Root",
+                    "genus": "Desulfocapsa"
+                }
+            }, {
+                "children": [{
+                    "children": [{
+                        "children": [{
+                            "count": 2,
+                            "rank": "genus",
+                            "confidence": "0.9",
+                            "name": "Hydrogenophaga",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Betaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Burkholderiales",
+                                "family": "Comamonadaceae",
+                                "norank": "Root",
+                                "genus": "Hydrogenophaga"
+                            }
+                        }, {
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "0.58",
+                            "name": "Caenimonas",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Betaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Burkholderiales",
+                                "family": "Comamonadaceae",
+                                "norank": "Root",
+                                "genus": "Caenimonas"
+                            }
+                        }, {
+                            "count": 12,
+                            "rank": "genus",
+                            "confidence": "1.0",
+                            "name": "Rhodoferax",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Betaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Burkholderiales",
+                                "family": "Comamonadaceae",
+                                "norank": "Root",
+                                "genus": "Rhodoferax"
+                            }
+                        }, {
+                            "count": 2,
+                            "rank": "genus",
+                            "confidence": "1.0",
+                            "name": "Acidovorax",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Betaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Burkholderiales",
+                                "family": "Comamonadaceae",
+                                "norank": "Root",
+                                "genus": "Acidovorax"
+                            }
+                        }, {
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "0.78",
+                            "name": "Macromonas",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Betaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Burkholderiales",
+                                "family": "Comamonadaceae",
+                                "norank": "Root",
+                                "genus": "Macromonas"
+                            }
+                        }, {
+                            "count": 2,
+                            "rank": "genus",
+                            "confidence": "0.38",
+                            "name": "Xenophilus",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Betaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Burkholderiales",
+                                "family": "Comamonadaceae",
+                                "norank": "Root",
+                                "genus": "Xenophilus"
+                            }
+                        }, {
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "0.61",
+                            "name": "Malikia",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Betaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Burkholderiales",
+                                "family": "Comamonadaceae",
+                                "norank": "Root",
+                                "genus": "Malikia"
+                            }
+                        }, {
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "0.38",
+                            "name": "Alicycliphilus",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Betaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Burkholderiales",
+                                "family": "Comamonadaceae",
+                                "norank": "Root",
+                                "genus": "Alicycliphilus"
+                            }
+                        }, {
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "0.3",
+                            "name": "Pseudacidovorax",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Betaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Burkholderiales",
+                                "family": "Comamonadaceae",
+                                "norank": "Root",
+                                "genus": "Pseudacidovorax"
+                            }
+                        }],
+                        "count": 23,
+                        "rank": "family",
+                        "confidence": "1.0",
+                        "name": "Comamonadaceae",
+                        "lineage": {
+                            "phylum": "Proteobacteria",
+                            "class": "Betaproteobacteria",
+                            "domain": "Bacteria",
+                            "order": "Burkholderiales",
+                            "family": "Comamonadaceae",
+                            "norank": "Root",
+                            "genus": "Hydrogenophaga"
+                        }
+                    }, {
+                        "children": [{
+                            "count": 2,
+                            "rank": "genus",
+                            "confidence": "0.8",
+                            "name": "Xylophilus",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Betaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Burkholderiales",
+                                "family": "Burkholderiales_incertae_sedis",
+                                "norank": "Root",
+                                "genus": "Xylophilus"
+                            }
+                        }],
+                        "count": 2,
+                        "rank": "family",
+                        "confidence": "0.8",
+                        "name": "Burkholderiales_incertae_sedis",
+                        "lineage": {
+                            "phylum": "Proteobacteria",
+                            "class": "Betaproteobacteria",
+                            "domain": "Bacteria",
+                            "order": "Burkholderiales",
+                            "family": "Burkholderiales_incertae_sedis",
+                            "norank": "Root",
+                            "genus": "Xylophilus"
+                        }
+                    }],
+                    "count": 25,
+                    "rank": "order",
+                    "confidence": "1.0",
+                    "name": "Burkholderiales",
+                    "lineage": {
+                        "phylum": "Proteobacteria",
+                        "class": "Betaproteobacteria",
+                        "domain": "Bacteria",
+                        "order": "Burkholderiales",
+                        "family": "Comamonadaceae",
+                        "norank": "Root",
+                        "genus": "Hydrogenophaga"
+                    }
+                }, {
+                    "children": [{
+                        "children": [{
+                            "count": 5,
+                            "rank": "genus",
+                            "confidence": "0.27",
+                            "name": "Ferribacterium",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Betaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Rhodocyclales",
+                                "family": "Rhodocyclaceae",
+                                "norank": "Root",
+                                "genus": "Ferribacterium"
+                            }
+                        }],
+                        "count": 5,
+                        "rank": "family",
+                        "confidence": "0.38",
+                        "name": "Rhodocyclaceae",
+                        "lineage": {
+                            "phylum": "Proteobacteria",
+                            "class": "Betaproteobacteria",
+                            "domain": "Bacteria",
+                            "order": "Rhodocyclales",
+                            "family": "Rhodocyclaceae",
+                            "norank": "Root",
+                            "genus": "Ferribacterium"
+                        }
+                    }],
+                    "count": 5,
+                    "rank": "order",
+                    "confidence": "0.38",
+                    "name": "Rhodocyclales",
+                    "lineage": {
+                        "phylum": "Proteobacteria",
+                        "class": "Betaproteobacteria",
+                        "domain": "Bacteria",
+                        "order": "Rhodocyclales",
+                        "family": "Rhodocyclaceae",
+                        "norank": "Root",
+                        "genus": "Ferribacterium"
+                    }
+                }, {
+                    "children": [{
+                        "children": [{
+                            "count": 2,
+                            "rank": "genus",
+                            "confidence": "0.38",
+                            "name": "Nitrosospira",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Betaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Nitrosomonadales",
+                                "family": "Nitrosomonadaceae",
+                                "norank": "Root",
+                                "genus": "Nitrosospira"
+                            }
+                        }],
+                        "count": 2,
+                        "rank": "family",
+                        "confidence": "0.38",
+                        "name": "Nitrosomonadaceae",
+                        "lineage": {
+                            "phylum": "Proteobacteria",
+                            "class": "Betaproteobacteria",
+                            "domain": "Bacteria",
+                            "order": "Nitrosomonadales",
+                            "family": "Nitrosomonadaceae",
+                            "norank": "Root",
+                            "genus": "Nitrosospira"
+                        }
+                    }],
+                    "count": 2,
+                    "rank": "order",
+                    "confidence": "0.38",
+                    "name": "Nitrosomonadales",
+                    "lineage": {
+                        "phylum": "Proteobacteria",
+                        "class": "Betaproteobacteria",
+                        "domain": "Bacteria",
+                        "order": "Nitrosomonadales",
+                        "family": "Nitrosomonadaceae",
+                        "norank": "Root",
+                        "genus": "Nitrosospira"
+                    }
+                }],
+                "count": 32,
+                "rank": "class",
+                "confidence": "1.0",
+                "name": "Betaproteobacteria",
+                "lineage": {
+                    "phylum": "Proteobacteria",
+                    "class": "Betaproteobacteria",
+                    "domain": "Bacteria",
+                    "order": "Burkholderiales",
+                    "family": "Comamonadaceae",
+                    "norank": "Root",
+                    "genus": "Hydrogenophaga"
+                }
+            }, {
+                "children": [{
+                    "children": [{
+                        "children": [{
+                            "count": 5,
+                            "rank": "genus",
+                            "confidence": "0.42",
+                            "name": "Beggiatoa",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Gammaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Thiotrichales",
+                                "family": "Thiotrichaceae",
+                                "norank": "Root",
+                                "genus": "Beggiatoa"
+                            }
+                        }],
+                        "count": 5,
+                        "rank": "family",
+                        "confidence": "0.42",
+                        "name": "Thiotrichaceae",
+                        "lineage": {
+                            "phylum": "Proteobacteria",
+                            "class": "Gammaproteobacteria",
+                            "domain": "Bacteria",
+                            "order": "Thiotrichales",
+                            "family": "Thiotrichaceae",
+                            "norank": "Root",
+                            "genus": "Beggiatoa"
+                        }
+                    }],
+                    "count": 5,
+                    "rank": "order",
+                    "confidence": "0.43",
+                    "name": "Thiotrichales",
+                    "lineage": {
+                        "phylum": "Proteobacteria",
+                        "class": "Gammaproteobacteria",
+                        "domain": "Bacteria",
+                        "order": "Thiotrichales",
+                        "family": "Thiotrichaceae",
+                        "norank": "Root",
+                        "genus": "Beggiatoa"
+                    }
+                }, {
+                    "children": [{
+                        "children": [{
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "1.0",
+                            "name": "Tatlockia",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Gammaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Legionellales",
+                                "family": "Legionellaceae",
+                                "norank": "Root",
+                                "genus": "Tatlockia"
+                            }
+                        }],
+                        "count": 1,
+                        "rank": "family",
+                        "confidence": "1.0",
+                        "name": "Legionellaceae",
+                        "lineage": {
+                            "phylum": "Proteobacteria",
+                            "class": "Gammaproteobacteria",
+                            "domain": "Bacteria",
+                            "order": "Legionellales",
+                            "family": "Legionellaceae",
+                            "norank": "Root",
+                            "genus": "Tatlockia"
+                        }
+                    }, {
+                        "children": [{
+                            "count": 3,
+                            "rank": "genus",
+                            "confidence": "1.0",
+                            "name": "Aquicella",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Gammaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Legionellales",
+                                "family": "Coxiellaceae",
+                                "norank": "Root",
+                                "genus": "Aquicella"
+                            }
+                        }],
+                        "count": 3,
+                        "rank": "family",
+                        "confidence": "1.0",
+                        "name": "Coxiellaceae",
+                        "lineage": {
+                            "phylum": "Proteobacteria",
+                            "class": "Gammaproteobacteria",
+                            "domain": "Bacteria",
+                            "order": "Legionellales",
+                            "family": "Coxiellaceae",
+                            "norank": "Root",
+                            "genus": "Aquicella"
+                        }
+                    }],
+                    "count": 4,
+                    "rank": "order",
+                    "confidence": "1.0",
+                    "name": "Legionellales",
+                    "lineage": {
+                        "phylum": "Proteobacteria",
+                        "class": "Gammaproteobacteria",
+                        "domain": "Bacteria",
+                        "order": "Legionellales",
+                        "family": "Legionellaceae",
+                        "norank": "Root",
+                        "genus": "Tatlockia"
+                    }
+                }, {
+                    "children": [{
+                        "children": [{
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "0.14",
+                            "name": "Oceanobacter",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Gammaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Oceanospirillales",
+                                "family": "Oceanospirillaceae",
+                                "norank": "Root",
+                                "genus": "Oceanobacter"
+                            }
+                        }],
+                        "count": 1,
+                        "rank": "family",
+                        "confidence": "0.18",
+                        "name": "Oceanospirillaceae",
+                        "lineage": {
+                            "phylum": "Proteobacteria",
+                            "class": "Gammaproteobacteria",
+                            "domain": "Bacteria",
+                            "order": "Oceanospirillales",
+                            "family": "Oceanospirillaceae",
+                            "norank": "Root",
+                            "genus": "Oceanobacter"
+                        }
+                    }],
+                    "count": 1,
+                    "rank": "order",
+                    "confidence": "0.37",
+                    "name": "Oceanospirillales",
+                    "lineage": {
+                        "phylum": "Proteobacteria",
+                        "class": "Gammaproteobacteria",
+                        "domain": "Bacteria",
+                        "order": "Oceanospirillales",
+                        "family": "Oceanospirillaceae",
+                        "norank": "Root",
+                        "genus": "Oceanobacter"
+                    }
+                }, {
+                    "children": [{
+                        "children": [{
+                            "count": 4,
+                            "rank": "genus",
+                            "confidence": "0.98",
+                            "name": "Acinetobacter",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Gammaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Pseudomonadales",
+                                "family": "Moraxellaceae",
+                                "norank": "Root",
+                                "genus": "Acinetobacter"
+                            }
+                        }, {
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "0.39",
+                            "name": "Alkanindiges",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Gammaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Pseudomonadales",
+                                "family": "Moraxellaceae",
+                                "norank": "Root",
+                                "genus": "Alkanindiges"
+                            }
+                        }],
+                        "count": 5,
+                        "rank": "family",
+                        "confidence": "1.0",
+                        "name": "Moraxellaceae",
+                        "lineage": {
+                            "phylum": "Proteobacteria",
+                            "class": "Gammaproteobacteria",
+                            "domain": "Bacteria",
+                            "order": "Pseudomonadales",
+                            "family": "Moraxellaceae",
+                            "norank": "Root",
+                            "genus": "Acinetobacter"
+                        }
+                    }],
+                    "count": 5,
+                    "rank": "order",
+                    "confidence": "1.0",
+                    "name": "Pseudomonadales",
+                    "lineage": {
+                        "phylum": "Proteobacteria",
+                        "class": "Gammaproteobacteria",
+                        "domain": "Bacteria",
+                        "order": "Pseudomonadales",
+                        "family": "Moraxellaceae",
+                        "norank": "Root",
+                        "genus": "Acinetobacter"
+                    }
+                }, {
+                    "children": [{
+                        "children": [{
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "1.0",
+                            "name": "Aeromonas",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Gammaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Aeromonadales",
+                                "family": "Aeromonadaceae",
+                                "norank": "Root",
+                                "genus": "Aeromonas"
+                            }
+                        }],
+                        "count": 1,
+                        "rank": "family",
+                        "confidence": "1.0",
+                        "name": "Aeromonadaceae",
+                        "lineage": {
+                            "phylum": "Proteobacteria",
+                            "class": "Gammaproteobacteria",
+                            "domain": "Bacteria",
+                            "order": "Aeromonadales",
+                            "family": "Aeromonadaceae",
+                            "norank": "Root",
+                            "genus": "Aeromonas"
+                        }
+                    }],
+                    "count": 1,
+                    "rank": "order",
+                    "confidence": "1.0",
+                    "name": "Aeromonadales",
+                    "lineage": {
+                        "phylum": "Proteobacteria",
+                        "class": "Gammaproteobacteria",
+                        "domain": "Bacteria",
+                        "order": "Aeromonadales",
+                        "family": "Aeromonadaceae",
+                        "norank": "Root",
+                        "genus": "Aeromonas"
+                    }
+                }, {
+                    "children": [{
+                        "children": [{
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "0.37",
+                            "name": "Thioflavicoccus",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Gammaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Chromatiales",
+                                "family": "Chromatiaceae",
+                                "norank": "Root",
+                                "genus": "Thioflavicoccus"
+                            }
+                        }, {
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "0.19",
+                            "name": "Nitrosococcus",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Gammaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Chromatiales",
+                                "family": "Chromatiaceae",
+                                "norank": "Root",
+                                "genus": "Nitrosococcus"
+                            }
+                        }],
+                        "count": 2,
+                        "rank": "family",
+                        "confidence": "0.6",
+                        "name": "Chromatiaceae",
+                        "lineage": {
+                            "phylum": "Proteobacteria",
+                            "class": "Gammaproteobacteria",
+                            "domain": "Bacteria",
+                            "order": "Chromatiales",
+                            "family": "Chromatiaceae",
+                            "norank": "Root",
+                            "genus": "Thioflavicoccus"
+                        }
+                    }, {
+                        "children": [{
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "0.33",
+                            "name": "Thioalkalispira",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Gammaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Chromatiales",
+                                "family": "Ectothiorhodospiraceae",
+                                "norank": "Root",
+                                "genus": "Thioalkalispira"
+                            }
+                        }],
+                        "count": 1,
+                        "rank": "family",
+                        "confidence": "0.48",
+                        "name": "Ectothiorhodospiraceae",
+                        "lineage": {
+                            "phylum": "Proteobacteria",
+                            "class": "Gammaproteobacteria",
+                            "domain": "Bacteria",
+                            "order": "Chromatiales",
+                            "family": "Ectothiorhodospiraceae",
+                            "norank": "Root",
+                            "genus": "Thioalkalispira"
+                        }
+                    }],
+                    "count": 3,
+                    "rank": "order",
+                    "confidence": "0.64",
+                    "name": "Chromatiales",
+                    "lineage": {
+                        "phylum": "Proteobacteria",
+                        "class": "Gammaproteobacteria",
+                        "domain": "Bacteria",
+                        "order": "Chromatiales",
+                        "family": "Chromatiaceae",
+                        "norank": "Root",
+                        "genus": "Thioflavicoccus"
+                    }
+                }, {
+                    "children": [{
+                        "count": 1,
+                        "rank": "genus",
+                        "confidence": "0.49",
+                        "name": "Sedimenticola",
+                        "lineage": {
+                            "phylum": "Proteobacteria",
+                            "class": "Gammaproteobacteria",
+                            "domain": "Bacteria",
+                            "family": "Gammaproteobacteria_incertae_sedis",
+                            "norank": "Root",
+                            "genus": "Sedimenticola"
+                        }
+                    }],
+                    "count": 1,
+                    "rank": "family",
+                    "confidence": "0.52",
+                    "name": "Gammaproteobacteria_incertae_sedis",
+                    "lineage": {
+                        "phylum": "Proteobacteria",
+                        "class": "Gammaproteobacteria",
+                        "domain": "Bacteria",
+                        "family": "Gammaproteobacteria_incertae_sedis",
+                        "norank": "Root",
+                        "genus": "Sedimenticola"
+                    }
+                }],
+                "count": 20,
+                "rank": "class",
+                "confidence": "1.0",
+                "name": "Gammaproteobacteria",
+                "lineage": {
+                    "phylum": "Proteobacteria",
+                    "class": "Gammaproteobacteria",
+                    "domain": "Bacteria",
+                    "order": "Thiotrichales",
+                    "family": "Thiotrichaceae",
+                    "norank": "Root",
+                    "genus": "Beggiatoa"
+                }
+            }, {
+                "children": [{
+                    "children": [{
+                        "children": [{
+                            "count": 3,
+                            "rank": "genus",
+                            "confidence": "0.13",
+                            "name": "Thioreductor",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Epsilonproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Nautiliales",
+                                "family": "Nautiliaceae",
+                                "norank": "Root",
+                                "genus": "Thioreductor"
+                            }
+                        }, {
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "0.13",
+                            "name": "Lebetimonas",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Epsilonproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Nautiliales",
+                                "family": "Nautiliaceae",
+                                "norank": "Root",
+                                "genus": "Lebetimonas"
+                            }
+                        }, {
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "0.05",
+                            "name": "Nitratifractor",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Epsilonproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Nautiliales",
+                                "family": "Nautiliaceae",
+                                "norank": "Root",
+                                "genus": "Nitratifractor"
+                            }
+                        }],
+                        "count": 5,
+                        "rank": "family",
+                        "confidence": "0.19",
+                        "name": "Nautiliaceae",
+                        "lineage": {
+                            "phylum": "Proteobacteria",
+                            "class": "Epsilonproteobacteria",
+                            "domain": "Bacteria",
+                            "order": "Nautiliales",
+                            "family": "Nautiliaceae",
+                            "norank": "Root",
+                            "genus": "Thioreductor"
+                        }
+                    }],
+                    "count": 5,
+                    "rank": "order",
+                    "confidence": "0.19",
+                    "name": "Nautiliales",
+                    "lineage": {
+                        "phylum": "Proteobacteria",
+                        "class": "Epsilonproteobacteria",
+                        "domain": "Bacteria",
+                        "order": "Nautiliales",
+                        "family": "Nautiliaceae",
+                        "norank": "Root",
+                        "genus": "Thioreductor"
+                    }
+                }, {
+                    "children": [{
+                        "children": [{
+                            "count": 2,
+                            "rank": "genus",
+                            "confidence": "0.06",
+                            "name": "Wolinella",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Epsilonproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Campylobacterales",
+                                "family": "Helicobacteraceae",
+                                "norank": "Root",
+                                "genus": "Wolinella"
+                            }
+                        }, {
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "0.09",
+                            "name": "Sulfurovum",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Epsilonproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Campylobacterales",
+                                "family": "Helicobacteraceae",
+                                "norank": "Root",
+                                "genus": "Sulfurovum"
+                            }
+                        }, {
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "1.0",
+                            "name": "Sulfurimonas",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Epsilonproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Campylobacterales",
+                                "family": "Helicobacteraceae",
+                                "norank": "Root",
+                                "genus": "Sulfurimonas"
+                            }
+                        }],
+                        "count": 4,
+                        "rank": "family",
+                        "confidence": "0.06",
+                        "name": "Helicobacteraceae",
+                        "lineage": {
+                            "phylum": "Proteobacteria",
+                            "class": "Epsilonproteobacteria",
+                            "domain": "Bacteria",
+                            "order": "Campylobacterales",
+                            "family": "Helicobacteraceae",
+                            "norank": "Root",
+                            "genus": "Wolinella"
+                        }
+                    }],
+                    "count": 4,
+                    "rank": "order",
+                    "confidence": "0.06",
+                    "name": "Campylobacterales",
+                    "lineage": {
+                        "phylum": "Proteobacteria",
+                        "class": "Epsilonproteobacteria",
+                        "domain": "Bacteria",
+                        "order": "Campylobacterales",
+                        "family": "Helicobacteraceae",
+                        "norank": "Root",
+                        "genus": "Wolinella"
+                    }
+                }],
+                "count": 9,
+                "rank": "class",
+                "confidence": "0.3",
+                "name": "Epsilonproteobacteria",
+                "lineage": {
+                    "phylum": "Proteobacteria",
+                    "class": "Epsilonproteobacteria",
+                    "domain": "Bacteria",
+                    "order": "Nautiliales",
+                    "family": "Nautiliaceae",
+                    "norank": "Root",
+                    "genus": "Thioreductor"
+                }
+            }, {
+                "children": [{
+                    "children": [{
+                        "children": [{
+                            "count": 2,
+                            "rank": "genus",
+                            "confidence": "0.68",
+                            "name": "Pseudorhodobacter",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Alphaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Rhodobacterales",
+                                "family": "Rhodobacteraceae",
+                                "norank": "Root",
+                                "genus": "Pseudorhodobacter"
+                            }
+                        }],
+                        "count": 2,
+                        "rank": "family",
+                        "confidence": "1.0",
+                        "name": "Rhodobacteraceae",
+                        "lineage": {
+                            "phylum": "Proteobacteria",
+                            "class": "Alphaproteobacteria",
+                            "domain": "Bacteria",
+                            "order": "Rhodobacterales",
+                            "family": "Rhodobacteraceae",
+                            "norank": "Root",
+                            "genus": "Pseudorhodobacter"
+                        }
+                    }],
+                    "count": 2,
+                    "rank": "order",
+                    "confidence": "1.0",
+                    "name": "Rhodobacterales",
+                    "lineage": {
+                        "phylum": "Proteobacteria",
+                        "class": "Alphaproteobacteria",
+                        "domain": "Bacteria",
+                        "order": "Rhodobacterales",
+                        "family": "Rhodobacteraceae",
+                        "norank": "Root",
+                        "genus": "Pseudorhodobacter"
+                    }
+                }, {
+                    "children": [{
+                        "children": [{
+                            "count": 2,
+                            "rank": "genus",
+                            "confidence": "0.46",
+                            "name": "Pelagibius",
+                            "lineage": {
+                                "phylum": "Proteobacteria",
+                                "class": "Alphaproteobacteria",
+                                "domain": "Bacteria",
+                                "order": "Rhodospirillales",
+                                "family": "Rhodospirillaceae",
+                                "norank": "Root",
+                                "genus": "Pelagibius"
+                            }
+                        }],
+                        "count": 2,
+                        "rank": "family",
+                        "confidence": "0.57",
+                        "name": "Rhodospirillaceae",
+                        "lineage": {
+                            "phylum": "Proteobacteria",
+                            "class": "Alphaproteobacteria",
+                            "domain": "Bacteria",
+                            "order": "Rhodospirillales",
+                            "family": "Rhodospirillaceae",
+                            "norank": "Root",
+                            "genus": "Pelagibius"
+                        }
+                    }],
+                    "count": 2,
+                    "rank": "order",
+                    "confidence": "0.58",
+                    "name": "Rhodospirillales",
+                    "lineage": {
+                        "phylum": "Proteobacteria",
+                        "class": "Alphaproteobacteria",
+                        "domain": "Bacteria",
+                        "order": "Rhodospirillales",
+                        "family": "Rhodospirillaceae",
+                        "norank": "Root",
+                        "genus": "Pelagibius"
+                    }
+                }],
+                "count": 4,
+                "rank": "class",
+                "confidence": "1.0",
+                "name": "Alphaproteobacteria",
+                "lineage": {
+                    "phylum": "Proteobacteria",
+                    "class": "Alphaproteobacteria",
+                    "domain": "Bacteria",
+                    "order": "Rhodobacterales",
+                    "family": "Rhodobacteraceae",
+                    "norank": "Root",
+                    "genus": "Pseudorhodobacter"
+                }
+            }],
+            "count": 111,
+            "rank": "phylum",
+            "confidence": "1.0",
+            "name": "Proteobacteria",
+            "lineage": {
+                "phylum": "Proteobacteria",
+                "class": "Deltaproteobacteria",
+                "domain": "Bacteria",
+                "order": "Desulfobacterales",
+                "family": "Desulfobulbaceae",
+                "norank": "Root",
+                "genus": "Desulfocapsa"
+            }
+        }, {
+            "children": [{
+                "children": [{
+                    "children": [{
+                        "children": [{
+                            "count": 4,
+                            "rank": "genus",
+                            "confidence": "0.09",
+                            "name": "Longilinea",
+                            "lineage": {
+                                "phylum": "Chloroflexi",
+                                "class": "Anaerolineae",
+                                "domain": "Bacteria",
+                                "order": "Anaerolineales",
+                                "family": "Anaerolineaceae",
+                                "norank": "Root",
+                                "genus": "Longilinea"
+                            }
+                        }, {
+                            "count": 6,
+                            "rank": "genus",
+                            "confidence": "0.32",
+                            "name": "Levilinea",
+                            "lineage": {
+                                "phylum": "Chloroflexi",
+                                "class": "Anaerolineae",
+                                "domain": "Bacteria",
+                                "order": "Anaerolineales",
+                                "family": "Anaerolineaceae",
+                                "norank": "Root",
+                                "genus": "Levilinea"
+                            }
+                        }, {
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "0.12",
+                            "name": "Bellilinea",
+                            "lineage": {
+                                "phylum": "Chloroflexi",
+                                "class": "Anaerolineae",
+                                "domain": "Bacteria",
+                                "order": "Anaerolineales",
+                                "family": "Anaerolineaceae",
+                                "norank": "Root",
+                                "genus": "Bellilinea"
+                            }
+                        }],
+                        "count": 11,
+                        "rank": "family",
+                        "confidence": "0.14",
+                        "name": "Anaerolineaceae",
+                        "lineage": {
+                            "phylum": "Chloroflexi",
+                            "class": "Anaerolineae",
+                            "domain": "Bacteria",
+                            "order": "Anaerolineales",
+                            "family": "Anaerolineaceae",
+                            "norank": "Root",
+                            "genus": "Longilinea"
+                        }
+                    }],
+                    "count": 11,
+                    "rank": "order",
+                    "confidence": "0.14",
+                    "name": "Anaerolineales",
+                    "lineage": {
+                        "phylum": "Chloroflexi",
+                        "class": "Anaerolineae",
+                        "domain": "Bacteria",
+                        "order": "Anaerolineales",
+                        "family": "Anaerolineaceae",
+                        "norank": "Root",
+                        "genus": "Longilinea"
+                    }
+                }],
+                "count": 11,
+                "rank": "class",
+                "confidence": "0.14",
+                "name": "Anaerolineae",
+                "lineage": {
+                    "phylum": "Chloroflexi",
+                    "class": "Anaerolineae",
+                    "domain": "Bacteria",
+                    "order": "Anaerolineales",
+                    "family": "Anaerolineaceae",
+                    "norank": "Root",
+                    "genus": "Longilinea"
+                }
+            }, {
+                "children": [{
+                    "count": 2,
+                    "rank": "genus",
+                    "confidence": "0.13",
+                    "name": "Dehalogenimonas",
+                    "lineage": {
+                        "phylum": "Chloroflexi",
+                        "class": "Dehalococcoidetes",
+                        "domain": "Bacteria",
+                        "norank": "Root",
+                        "genus": "Dehalogenimonas"
+                    }
+                }],
+                "count": 2,
+                "rank": "class",
+                "confidence": "0.13",
+                "name": "Dehalococcoidetes",
+                "lineage": {
+                    "phylum": "Chloroflexi",
+                    "class": "Dehalococcoidetes",
+                    "domain": "Bacteria",
+                    "norank": "Root",
+                    "genus": "Dehalogenimonas"
+                }
+            }],
+            "count": 13,
+            "rank": "phylum",
+            "confidence": "0.2",
+            "name": "Chloroflexi",
+            "lineage": {
+                "phylum": "Chloroflexi",
+                "class": "Anaerolineae",
+                "domain": "Bacteria",
+                "order": "Anaerolineales",
+                "family": "Anaerolineaceae",
+                "norank": "Root",
+                "genus": "Longilinea"
+            }
+        }, {
+            "children": [{
+                "children": [{
+                    "children": [{
+                        "children": [{
+                            "count": 2,
+                            "rank": "genus",
+                            "confidence": "0.22",
+                            "name": "Filimonas",
+                            "lineage": {
+                                "phylum": "Bacteroidetes",
+                                "class": "Sphingobacteria",
+                                "domain": "Bacteria",
+                                "order": "Sphingobacteriales",
+                                "family": "Chitinophagaceae",
+                                "norank": "Root",
+                                "genus": "Filimonas"
+                            }
+                        }],
+                        "count": 2,
+                        "rank": "family",
+                        "confidence": "0.3",
+                        "name": "Chitinophagaceae",
+                        "lineage": {
+                            "phylum": "Bacteroidetes",
+                            "class": "Sphingobacteria",
+                            "domain": "Bacteria",
+                            "order": "Sphingobacteriales",
+                            "family": "Chitinophagaceae",
+                            "norank": "Root",
+                            "genus": "Filimonas"
+                        }
+                    }, {
+                        "children": [{
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "0.05",
+                            "name": "Perexilibacter",
+                            "lineage": {
+                                "phylum": "Bacteroidetes",
+                                "class": "Sphingobacteria",
+                                "domain": "Bacteria",
+                                "order": "Sphingobacteriales",
+                                "family": "Flammeovirgaceae",
+                                "norank": "Root",
+                                "genus": "Perexilibacter"
+                            }
+                        }],
+                        "count": 1,
+                        "rank": "family",
+                        "confidence": "0.05",
+                        "name": "Flammeovirgaceae",
+                        "lineage": {
+                            "phylum": "Bacteroidetes",
+                            "class": "Sphingobacteria",
+                            "domain": "Bacteria",
+                            "order": "Sphingobacteriales",
+                            "family": "Flammeovirgaceae",
+                            "norank": "Root",
+                            "genus": "Perexilibacter"
+                        }
+                    }, {
+                        "children": [{
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "0.21",
+                            "name": "Rhodothermus",
+                            "lineage": {
+                                "phylum": "Bacteroidetes",
+                                "class": "Sphingobacteria",
+                                "domain": "Bacteria",
+                                "order": "Sphingobacteriales",
+                                "family": "Rhodothermaceae",
+                                "norank": "Root",
+                                "genus": "Rhodothermus"
+                            }
+                        }],
+                        "count": 1,
+                        "rank": "family",
+                        "confidence": "0.21",
+                        "name": "Rhodothermaceae",
+                        "lineage": {
+                            "phylum": "Bacteroidetes",
+                            "class": "Sphingobacteria",
+                            "domain": "Bacteria",
+                            "order": "Sphingobacteriales",
+                            "family": "Rhodothermaceae",
+                            "norank": "Root",
+                            "genus": "Rhodothermus"
+                        }
+                    }, {
+                        "children": [{
+                            "count": 2,
+                            "rank": "genus",
+                            "confidence": "0.05",
+                            "name": "Microscilla",
+                            "lineage": {
+                                "phylum": "Bacteroidetes",
+                                "class": "Sphingobacteria",
+                                "domain": "Bacteria",
+                                "order": "Sphingobacteriales",
+                                "family": "Cytophagaceae",
+                                "norank": "Root",
+                                "genus": "Microscilla"
+                            }
+                        }],
+                        "count": 2,
+                        "rank": "family",
+                        "confidence": "0.07",
+                        "name": "Cytophagaceae",
+                        "lineage": {
+                            "phylum": "Bacteroidetes",
+                            "class": "Sphingobacteria",
+                            "domain": "Bacteria",
+                            "order": "Sphingobacteriales",
+                            "family": "Cytophagaceae",
+                            "norank": "Root",
+                            "genus": "Microscilla"
+                        }
+                    }],
+                    "count": 6,
+                    "rank": "order",
+                    "confidence": "0.31",
+                    "name": "Sphingobacteriales",
+                    "lineage": {
+                        "phylum": "Bacteroidetes",
+                        "class": "Sphingobacteria",
+                        "domain": "Bacteria",
+                        "order": "Sphingobacteriales",
+                        "family": "Chitinophagaceae",
+                        "norank": "Root",
+                        "genus": "Filimonas"
+                    }
+                }],
+                "count": 6,
+                "rank": "class",
+                "confidence": "0.31",
+                "name": "Sphingobacteria",
+                "lineage": {
+                    "phylum": "Bacteroidetes",
+                    "class": "Sphingobacteria",
+                    "domain": "Bacteria",
+                    "order": "Sphingobacteriales",
+                    "family": "Chitinophagaceae",
+                    "norank": "Root",
+                    "genus": "Filimonas"
+                }
+            }],
+            "count": 6,
+            "rank": "phylum",
+            "confidence": "0.35",
+            "name": "Bacteroidetes",
+            "lineage": {
+                "phylum": "Bacteroidetes",
+                "class": "Sphingobacteria",
+                "domain": "Bacteria",
+                "order": "Sphingobacteriales",
+                "family": "Chitinophagaceae",
+                "norank": "Root",
+                "genus": "Filimonas"
+            }
+        }, {
+            "children": [{
+                "children": [{
+                    "children": [{
+                        "children": [{
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "0.07",
+                            "name": "Gelria",
+                            "lineage": {
+                                "phylum": "Firmicutes",
+                                "class": "Clostridia",
+                                "domain": "Bacteria",
+                                "order": "Thermoanaerobacterales",
+                                "family": "Thermoanaerobacteraceae",
+                                "norank": "Root",
+                                "genus": "Gelria"
+                            }
+                        }],
+                        "count": 1,
+                        "rank": "family",
+                        "confidence": "0.17",
+                        "name": "Thermoanaerobacteraceae",
+                        "lineage": {
+                            "phylum": "Firmicutes",
+                            "class": "Clostridia",
+                            "domain": "Bacteria",
+                            "order": "Thermoanaerobacterales",
+                            "family": "Thermoanaerobacteraceae",
+                            "norank": "Root",
+                            "genus": "Gelria"
+                        }
+                    }, {
+                        "children": [{
+                            "count": 2,
+                            "rank": "genus",
+                            "confidence": "0.07",
+                            "name": "Thermodesulfobium",
+                            "lineage": {
+                                "phylum": "Firmicutes",
+                                "class": "Clostridia",
+                                "domain": "Bacteria",
+                                "order": "Thermoanaerobacterales",
+                                "family": "Thermodesulfobiaceae",
+                                "norank": "Root",
+                                "genus": "Thermodesulfobium"
+                            }
+                        }],
+                        "count": 2,
+                        "rank": "family",
+                        "confidence": "0.07",
+                        "name": "Thermodesulfobiaceae",
+                        "lineage": {
+                            "phylum": "Firmicutes",
+                            "class": "Clostridia",
+                            "domain": "Bacteria",
+                            "order": "Thermoanaerobacterales",
+                            "family": "Thermodesulfobiaceae",
+                            "norank": "Root",
+                            "genus": "Thermodesulfobium"
+                        }
+                    }],
+                    "count": 3,
+                    "rank": "order",
+                    "confidence": "0.17",
+                    "name": "Thermoanaerobacterales",
+                    "lineage": {
+                        "phylum": "Firmicutes",
+                        "class": "Clostridia",
+                        "domain": "Bacteria",
+                        "order": "Thermoanaerobacterales",
+                        "family": "Thermoanaerobacteraceae",
+                        "norank": "Root",
+                        "genus": "Gelria"
+                    }
+                }, {
+                    "children": [{
+                        "children": [{
+                            "count": 3,
+                            "rank": "genus",
+                            "confidence": "0.05",
+                            "name": "Acetivibrio",
+                            "lineage": {
+                                "phylum": "Firmicutes",
+                                "class": "Clostridia",
+                                "domain": "Bacteria",
+                                "order": "Clostridiales",
+                                "family": "Ruminococcaceae",
+                                "norank": "Root",
+                                "genus": "Acetivibrio"
+                            }
+                        }],
+                        "count": 3,
+                        "rank": "family",
+                        "confidence": "0.09",
+                        "name": "Ruminococcaceae",
+                        "lineage": {
+                            "phylum": "Firmicutes",
+                            "class": "Clostridia",
+                            "domain": "Bacteria",
+                            "order": "Clostridiales",
+                            "family": "Ruminococcaceae",
+                            "norank": "Root",
+                            "genus": "Acetivibrio"
+                        }
+                    }, {
+                        "children": [{
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "0.13",
+                            "name": "Dethiosulfatibacter",
+                            "lineage": {
+                                "phylum": "Firmicutes",
+                                "class": "Clostridia",
+                                "domain": "Bacteria",
+                                "order": "Clostridiales",
+                                "family": "Incertae Sedis XIV",
+                                "norank": "Root",
+                                "genus": "Dethiosulfatibacter"
+                            }
+                        }],
+                        "count": 1,
+                        "rank": "family",
+                        "confidence": "0.13",
+                        "name": "Incertae Sedis XIV",
+                        "lineage": {
+                            "phylum": "Firmicutes",
+                            "class": "Clostridia",
+                            "domain": "Bacteria",
+                            "order": "Clostridiales",
+                            "family": "Incertae Sedis XIV",
+                            "norank": "Root",
+                            "genus": "Dethiosulfatibacter"
+                        }
+                    }, {
+                        "children": [{
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "0.04",
+                            "name": "Anaeroarcus",
+                            "lineage": {
+                                "phylum": "Firmicutes",
+                                "class": "Clostridia",
+                                "domain": "Bacteria",
+                                "order": "Clostridiales",
+                                "family": "Veillonellaceae",
+                                "norank": "Root",
+                                "genus": "Anaeroarcus"
+                            }
+                        }],
+                        "count": 1,
+                        "rank": "family",
+                        "confidence": "0.11",
+                        "name": "Veillonellaceae",
+                        "lineage": {
+                            "phylum": "Firmicutes",
+                            "class": "Clostridia",
+                            "domain": "Bacteria",
+                            "order": "Clostridiales",
+                            "family": "Veillonellaceae",
+                            "norank": "Root",
+                            "genus": "Anaeroarcus"
+                        }
+                    }],
+                    "count": 5,
+                    "rank": "order",
+                    "confidence": "0.45",
+                    "name": "Clostridiales",
+                    "lineage": {
+                        "phylum": "Firmicutes",
+                        "class": "Clostridia",
+                        "domain": "Bacteria",
+                        "order": "Clostridiales",
+                        "family": "Ruminococcaceae",
+                        "norank": "Root",
+                        "genus": "Acetivibrio"
+                    }
+                }],
+                "count": 8,
+                "rank": "class",
+                "confidence": "0.36",
+                "name": "Clostridia",
+                "lineage": {
+                    "phylum": "Firmicutes",
+                    "class": "Clostridia",
+                    "domain": "Bacteria",
+                    "order": "Thermoanaerobacterales",
+                    "family": "Thermoanaerobacteraceae",
+                    "norank": "Root",
+                    "genus": "Gelria"
+                }
+            }, {
+                "children": [{
+                    "children": [{
+                        "children": [{
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "1.0",
+                            "name": "Staphylococcus",
+                            "lineage": {
+                                "phylum": "Firmicutes",
+                                "class": "Bacilli",
+                                "domain": "Bacteria",
+                                "order": "Bacillales",
+                                "family": "Staphylococcaceae",
+                                "norank": "Root",
+                                "genus": "Staphylococcus"
+                            }
+                        }],
+                        "count": 1,
+                        "rank": "family",
+                        "confidence": "1.0",
+                        "name": "Staphylococcaceae",
+                        "lineage": {
+                            "phylum": "Firmicutes",
+                            "class": "Bacilli",
+                            "domain": "Bacteria",
+                            "order": "Bacillales",
+                            "family": "Staphylococcaceae",
+                            "norank": "Root",
+                            "genus": "Staphylococcus"
+                        }
+                    }],
+                    "count": 1,
+                    "rank": "order",
+                    "confidence": "1.0",
+                    "name": "Bacillales",
+                    "lineage": {
+                        "phylum": "Firmicutes",
+                        "class": "Bacilli",
+                        "domain": "Bacteria",
+                        "order": "Bacillales",
+                        "family": "Staphylococcaceae",
+                        "norank": "Root",
+                        "genus": "Staphylococcus"
+                    }
+                }],
+                "count": 1,
+                "rank": "class",
+                "confidence": "1.0",
+                "name": "Bacilli",
+                "lineage": {
+                    "phylum": "Firmicutes",
+                    "class": "Bacilli",
+                    "domain": "Bacteria",
+                    "order": "Bacillales",
+                    "family": "Staphylococcaceae",
+                    "norank": "Root",
+                    "genus": "Staphylococcus"
+                }
+            }, {
+                "children": [{
+                    "children": [{
+                        "children": [{
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "0.02",
+                            "name": "Turicibacter",
+                            "lineage": {
+                                "phylum": "Firmicutes",
+                                "class": "Erysipelotrichi",
+                                "domain": "Bacteria",
+                                "order": "Erysipelotrichales",
+                                "family": "Erysipelotrichaceae",
+                                "norank": "Root",
+                                "genus": "Turicibacter"
+                            }
+                        }],
+                        "count": 1,
+                        "rank": "family",
+                        "confidence": "0.02",
+                        "name": "Erysipelotrichaceae",
+                        "lineage": {
+                            "phylum": "Firmicutes",
+                            "class": "Erysipelotrichi",
+                            "domain": "Bacteria",
+                            "order": "Erysipelotrichales",
+                            "family": "Erysipelotrichaceae",
+                            "norank": "Root",
+                            "genus": "Turicibacter"
+                        }
+                    }],
+                    "count": 1,
+                    "rank": "order",
+                    "confidence": "0.02",
+                    "name": "Erysipelotrichales",
+                    "lineage": {
+                        "phylum": "Firmicutes",
+                        "class": "Erysipelotrichi",
+                        "domain": "Bacteria",
+                        "order": "Erysipelotrichales",
+                        "family": "Erysipelotrichaceae",
+                        "norank": "Root",
+                        "genus": "Turicibacter"
+                    }
+                }],
+                "count": 1,
+                "rank": "class",
+                "confidence": "0.02",
+                "name": "Erysipelotrichi",
+                "lineage": {
+                    "phylum": "Firmicutes",
+                    "class": "Erysipelotrichi",
+                    "domain": "Bacteria",
+                    "order": "Erysipelotrichales",
+                    "family": "Erysipelotrichaceae",
+                    "norank": "Root",
+                    "genus": "Turicibacter"
+                }
+            }],
+            "count": 10,
+            "rank": "phylum",
+            "confidence": "0.43",
+            "name": "Firmicutes",
+            "lineage": {
+                "phylum": "Firmicutes",
+                "class": "Clostridia",
+                "domain": "Bacteria",
+                "order": "Thermoanaerobacterales",
+                "family": "Thermoanaerobacteraceae",
+                "norank": "Root",
+                "genus": "Gelria"
+            }
+        }, {
+            "children": [{
+                "count": 1,
+                "rank": "genus",
+                "confidence": "1.0",
+                "name": "SR1_genera_incertae_sedis",
+                "lineage": {
+                    "phylum": "SR1",
+                    "domain": "Bacteria",
+                    "norank": "Root",
+                    "genus": "SR1_genera_incertae_sedis"
+                }
+            }],
+            "count": 1,
+            "rank": "phylum",
+            "confidence": "1.0",
+            "name": "SR1",
+            "lineage": {
+                "phylum": "SR1",
+                "domain": "Bacteria",
+                "norank": "Root",
+                "genus": "SR1_genera_incertae_sedis"
+            }
+        }, {
+            "children": [{
+                "count": 7,
+                "rank": "genus",
+                "confidence": "0.37",
+                "name": "OD1_genera_incertae_sedis",
+                "lineage": {
+                    "phylum": "OD1",
+                    "domain": "Bacteria",
+                    "norank": "Root",
+                    "genus": "OD1_genera_incertae_sedis"
+                }
+            }],
+            "count": 7,
+            "rank": "phylum",
+            "confidence": "0.37",
+            "name": "OD1",
+            "lineage": {
+                "phylum": "OD1",
+                "domain": "Bacteria",
+                "norank": "Root",
+                "genus": "OD1_genera_incertae_sedis"
+            }
+        }, {
+            "children": [{
+                "count": 1,
+                "rank": "genus",
+                "confidence": "1.0",
+                "name": "TM7_genera_incertae_sedis",
+                "lineage": {
+                    "phylum": "TM7",
+                    "domain": "Bacteria",
+                    "norank": "Root",
+                    "genus": "TM7_genera_incertae_sedis"
+                }
+            }],
+            "count": 1,
+            "rank": "phylum",
+            "confidence": "1.0",
+            "name": "TM7",
+            "lineage": {
+                "phylum": "TM7",
+                "domain": "Bacteria",
+                "norank": "Root",
+                "genus": "TM7_genera_incertae_sedis"
+            }
+        }, {
+            "children": [{
+                "children": [{
+                    "children": [{
+                        "children": [{
+                            "count": 2,
+                            "rank": "genus",
+                            "confidence": "0.03",
+                            "name": "Cerasicoccus",
+                            "lineage": {
+                                "phylum": "Verrucomicrobia",
+                                "class": "Opitutae",
+                                "domain": "Bacteria",
+                                "order": "Puniceicoccales",
+                                "family": "Puniceicoccaceae",
+                                "norank": "Root",
+                                "genus": "Cerasicoccus"
+                            }
+                        }],
+                        "count": 2,
+                        "rank": "family",
+                        "confidence": "0.03",
+                        "name": "Puniceicoccaceae",
+                        "lineage": {
+                            "phylum": "Verrucomicrobia",
+                            "class": "Opitutae",
+                            "domain": "Bacteria",
+                            "order": "Puniceicoccales",
+                            "family": "Puniceicoccaceae",
+                            "norank": "Root",
+                            "genus": "Cerasicoccus"
+                        }
+                    }],
+                    "count": 2,
+                    "rank": "order",
+                    "confidence": "0.03",
+                    "name": "Puniceicoccales",
+                    "lineage": {
+                        "phylum": "Verrucomicrobia",
+                        "class": "Opitutae",
+                        "domain": "Bacteria",
+                        "order": "Puniceicoccales",
+                        "family": "Puniceicoccaceae",
+                        "norank": "Root",
+                        "genus": "Cerasicoccus"
+                    }
+                }],
+                "count": 2,
+                "rank": "class",
+                "confidence": "0.04",
+                "name": "Opitutae",
+                "lineage": {
+                    "phylum": "Verrucomicrobia",
+                    "class": "Opitutae",
+                    "domain": "Bacteria",
+                    "order": "Puniceicoccales",
+                    "family": "Puniceicoccaceae",
+                    "norank": "Root",
+                    "genus": "Cerasicoccus"
+                }
+            }],
+            "count": 2,
+            "rank": "phylum",
+            "confidence": "0.1",
+            "name": "Verrucomicrobia",
+            "lineage": {
+                "phylum": "Verrucomicrobia",
+                "class": "Opitutae",
+                "domain": "Bacteria",
+                "order": "Puniceicoccales",
+                "family": "Puniceicoccaceae",
+                "norank": "Root",
+                "genus": "Cerasicoccus"
+            }
+        }, {
+            "children": [{
+                "children": [{
+                    "children": [{
+                        "children": [{
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "0.08",
+                            "name": "Venenivibrio",
+                            "lineage": {
+                                "phylum": "Aquificae",
+                                "class": "Aquificae",
+                                "domain": "Bacteria",
+                                "order": "Aquificales",
+                                "family": "Hydrogenothermaceae",
+                                "norank": "Root",
+                                "genus": "Venenivibrio"
+                            }
+                        }],
+                        "count": 1,
+                        "rank": "family",
+                        "confidence": "0.08",
+                        "name": "Hydrogenothermaceae",
+                        "lineage": {
+                            "phylum": "Aquificae",
+                            "class": "Aquificae",
+                            "domain": "Bacteria",
+                            "order": "Aquificales",
+                            "family": "Hydrogenothermaceae",
+                            "norank": "Root",
+                            "genus": "Venenivibrio"
+                        }
+                    }],
+                    "count": 1,
+                    "rank": "order",
+                    "confidence": "0.09",
+                    "name": "Aquificales",
+                    "lineage": {
+                        "phylum": "Aquificae",
+                        "class": "Aquificae",
+                        "domain": "Bacteria",
+                        "order": "Aquificales",
+                        "family": "Hydrogenothermaceae",
+                        "norank": "Root",
+                        "genus": "Venenivibrio"
+                    }
+                }],
+                "count": 1,
+                "rank": "class",
+                "confidence": "0.09",
+                "name": "Aquificae",
+                "lineage": {
+                    "phylum": "Aquificae",
+                    "class": "Aquificae",
+                    "domain": "Bacteria",
+                    "order": "Aquificales",
+                    "family": "Hydrogenothermaceae",
+                    "norank": "Root",
+                    "genus": "Venenivibrio"
+                }
+            }],
+            "count": 1,
+            "rank": "phylum",
+            "confidence": "0.09",
+            "name": "Aquificae",
+            "lineage": {
+                "phylum": "Aquificae",
+                "class": "Aquificae",
+                "domain": "Bacteria",
+                "order": "Aquificales",
+                "family": "Hydrogenothermaceae",
+                "norank": "Root",
+                "genus": "Venenivibrio"
+            }
+        }, {
+            "children": [{
+                "count": 2,
+                "rank": "genus",
+                "confidence": "0.92",
+                "name": "OP11_genera_incertae_sedis",
+                "lineage": {
+                    "phylum": "OP11",
+                    "domain": "Bacteria",
+                    "norank": "Root",
+                    "genus": "OP11_genera_incertae_sedis"
+                }
+            }],
+            "count": 2,
+            "rank": "phylum",
+            "confidence": "0.92",
+            "name": "OP11",
+            "lineage": {
+                "phylum": "OP11",
+                "domain": "Bacteria",
+                "norank": "Root",
+                "genus": "OP11_genera_incertae_sedis"
+            }
+        }, {
+            "children": [{
+                "children": [{
+                    "children": [{
+                        "children": [{
+                            "children": [{
+                                "children": [{
+                                    "count": 1,
+                                    "rank": "genus",
+                                    "confidence": "0.06",
+                                    "name": "Fodinicola",
+                                    "lineage": {
+                                        "phylum": "Actinobacteria",
+                                        "class": "Actinobacteria",
+                                        "subclass": "Actinobacteridae",
+                                        "domain": "Bacteria",
+                                        "order": "Actinomycetales",
+                                        "family": "Frankineae_incertae_sedis",
+                                        "norank": "Root",
+                                        "genus": "Fodinicola",
+                                        "suborder": "Frankineae"
+                                    }
+                                }],
+                                "count": 1,
+                                "rank": "family",
+                                "confidence": "0.06",
+                                "name": "Frankineae_incertae_sedis",
+                                "lineage": {
+                                    "phylum": "Actinobacteria",
+                                    "class": "Actinobacteria",
+                                    "subclass": "Actinobacteridae",
+                                    "domain": "Bacteria",
+                                    "order": "Actinomycetales",
+                                    "family": "Frankineae_incertae_sedis",
+                                    "norank": "Root",
+                                    "genus": "Fodinicola",
+                                    "suborder": "Frankineae"
+                                }
+                            }],
+                            "count": 1,
+                            "rank": "suborder",
+                            "confidence": "0.1",
+                            "name": "Frankineae",
+                            "lineage": {
+                                "phylum": "Actinobacteria",
+                                "class": "Actinobacteria",
+                                "subclass": "Actinobacteridae",
+                                "domain": "Bacteria",
+                                "order": "Actinomycetales",
+                                "family": "Frankineae_incertae_sedis",
+                                "norank": "Root",
+                                "genus": "Fodinicola",
+                                "suborder": "Frankineae"
+                            }
+                        }],
+                        "count": 1,
+                        "rank": "order",
+                        "confidence": "0.34",
+                        "name": "Actinomycetales",
+                        "lineage": {
+                            "phylum": "Actinobacteria",
+                            "class": "Actinobacteria",
+                            "subclass": "Actinobacteridae",
+                            "domain": "Bacteria",
+                            "order": "Actinomycetales",
+                            "family": "Frankineae_incertae_sedis",
+                            "norank": "Root",
+                            "genus": "Fodinicola",
+                            "suborder": "Frankineae"
+                        }
+                    }],
+                    "count": 1,
+                    "rank": "subclass",
+                    "confidence": "0.34",
+                    "name": "Actinobacteridae",
+                    "lineage": {
+                        "phylum": "Actinobacteria",
+                        "class": "Actinobacteria",
+                        "subclass": "Actinobacteridae",
+                        "domain": "Bacteria",
+                        "order": "Actinomycetales",
+                        "family": "Frankineae_incertae_sedis",
+                        "norank": "Root",
+                        "genus": "Fodinicola",
+                        "suborder": "Frankineae"
+                    }
+                }],
+                "count": 1,
+                "rank": "class",
+                "confidence": "0.44",
+                "name": "Actinobacteria",
+                "lineage": {
+                    "phylum": "Actinobacteria",
+                    "class": "Actinobacteria",
+                    "subclass": "Actinobacteridae",
+                    "domain": "Bacteria",
+                    "order": "Actinomycetales",
+                    "family": "Frankineae_incertae_sedis",
+                    "norank": "Root",
+                    "genus": "Fodinicola",
+                    "suborder": "Frankineae"
+                }
+            }],
+            "count": 1,
+            "rank": "phylum",
+            "confidence": "0.44",
+            "name": "Actinobacteria",
+            "lineage": {
+                "phylum": "Actinobacteria",
+                "class": "Actinobacteria",
+                "subclass": "Actinobacteridae",
+                "domain": "Bacteria",
+                "order": "Actinomycetales",
+                "family": "Frankineae_incertae_sedis",
+                "norank": "Root",
+                "genus": "Fodinicola",
+                "suborder": "Frankineae"
+            }
+        }, {
+            "children": [{
+                "children": [{
+                    "children": [{
+                        "children": [{
+                            "count": 1,
+                            "rank": "genus",
+                            "confidence": "0.29",
+                            "name": "Lentisphaera",
+                            "lineage": {
+                                "phylum": "Lentisphaerae",
+                                "class": "Lentisphaeria",
+                                "domain": "Bacteria",
+                                "order": "Lentisphaerales",
+                                "family": "Lentisphaeraceae",
+                                "norank": "Root",
+                                "genus": "Lentisphaera"
+                            }
+                        }],
+                        "count": 1,
+                        "rank": "family",
+                        "confidence": "0.29",
+                        "name": "Lentisphaeraceae",
+                        "lineage": {
+                            "phylum": "Lentisphaerae",
+                            "class": "Lentisphaeria",
+                            "domain": "Bacteria",
+                            "order": "Lentisphaerales",
+                            "family": "Lentisphaeraceae",
+                            "norank": "Root",
+                            "genus": "Lentisphaera"
+                        }
+                    }],
+                    "count": 1,
+                    "rank": "order",
+                    "confidence": "0.29",
+                    "name": "Lentisphaerales",
+                    "lineage": {
+                        "phylum": "Lentisphaerae",
+                        "class": "Lentisphaeria",
+                        "domain": "Bacteria",
+                        "order": "Lentisphaerales",
+                        "family": "Lentisphaeraceae",
+                        "norank": "Root",
+                        "genus": "Lentisphaera"
+                    }
+                }],
+                "count": 1,
+                "rank": "class",
+                "confidence": "0.3",
+                "name": "Lentisphaeria",
+                "lineage": {
+                    "phylum": "Lentisphaerae",
+                    "class": "Lentisphaeria",
+                    "domain": "Bacteria",
+                    "order": "Lentisphaerales",
+                    "family": "Lentisphaeraceae",
+                    "norank": "Root",
+                    "genus": "Lentisphaera"
+                }
+            }],
+            "count": 1,
+            "rank": "phylum",
+            "confidence": "0.3",
+            "name": "Lentisphaerae",
+            "lineage": {
+                "phylum": "Lentisphaerae",
+                "class": "Lentisphaeria",
+                "domain": "Bacteria",
+                "order": "Lentisphaerales",
+                "family": "Lentisphaeraceae",
+                "norank": "Root",
+                "genus": "Lentisphaera"
+            }
+        }],
+        "count": 168,
+        "rank": "domain",
+        "confidence": "1.0",
+        "name": "Bacteria",
+        "lineage": {
+            "phylum": "Caldiserica",
+            "class": "Caldisericia",
+            "domain": "Bacteria",
+            "order": "Caldisericales",
+            "family": "Caldisericaceae",
+            "norank": "Root",
+            "genus": "Caldisericum"
+        }
+    }],
+    "count": 168,
+    "rank": "norank",
+    "confidence": "1.0",
+    "name": "Root",
+    "lineage": {
+        "phylum": "Caldiserica",
+        "class": "Caldisericia",
+        "domain": "Bacteria",
+        "order": "Caldisericales",
+        "family": "Caldisericaceae",
+        "norank": "Root",
+        "genus": "Caldisericum"
+    }
+}

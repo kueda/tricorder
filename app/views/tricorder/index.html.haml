@@ -1,0 +1,24 @@
+#header
+  .inner
+    %h1
+      = link_to "Tricorder", root_path
+    treemaps for metagenomics
+    %ul.menu.right
+      %li tasks
+      %li upload
+      %li compare
+  
+#welcome{:style => "display:none"}
+  Welcome to Tricorder, a treemap-based taxonomic visualization for
+  metagenomic samples.
+  
+  %ul
+    %li Upload FASTA
+
+#main
+  #treemap
+
+:javascript
+  d3.json(#{@json_url.inspect}, function(tree) {
+    buildTreemap(tree)
+  })
