@@ -1,8 +1,10 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   helper_method :current_user
-  helper_method :user_signed_in?
+  helper_method :signed_in?
   helper_method :correct_user?
+  
+  include FlowTasksHelper
 
   private
     def current_user
@@ -13,7 +15,7 @@ class ApplicationController < ActionController::Base
       end
     end
 
-    def user_signed_in?
+    def signed_in?
       return true if current_user
     end
 
@@ -28,6 +30,12 @@ class ApplicationController < ActionController::Base
       if !current_user
         redirect_to root_url, :alert => 'You need to sign in for access to this page.'
       end
+    end
+    
+    def redirect_to_back_or(alt, options = {})
+      url = request.env['HTTP_REFERER'] || alt
+      url = alt if url == request.url
+      redirect_to(url, options)
     end
 
 end

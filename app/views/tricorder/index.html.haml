@@ -7,18 +7,57 @@
       %li tasks
       %li upload
       %li compare
+      - if signed_in?
+        %li
+          Welcome,
+          = truncate (current_user.try(:name) || current_user.email).split.first, :lenght => 100
+          = link_to "(Sign out)", signout_path, :class => "small"
   
 #welcome{:style => "display:none"}
   Welcome to Tricorder, a treemap-based taxonomic visualization for
   metagenomic samples.
-  
-  %ul
-    %li Upload FASTA
 
+#signin.dialog
+  %p
+    Tricorder helps you get a feel for what kinds of organisms exist in a pool
+    of sequence data.
+  %p To get started, sign in with
+  
+  .centered
+    - for provider, url in {:google => '/auth/google'}
+      = link_to provider, url, :class => "button"
+#upload.dialog
+  = form_for ClassificationFlowTask.new, :url => flow_tasks_path, :html => {:multipart => true} do |f|
+    = f.fields_for :inputs, f.object.inputs.build do |fi|
+      = fi.file_field :file, :class => "stacked", :required => "true"
+    
+    .centered
+      = f.submit "Visualize", :class => "button"
 #main
   #treemap
 
 :javascript
-  d3.json(#{@json_url.inspect}, function(tree) {
-    buildTreemap(tree)
+  window.treemapResizeHandler = function() {
+    var now = (new Date()).getTime()
+    if (treemapNeedsResize && now - treemapNeedsResize > 400) {
+      console.log("foo");
+      rebuildTreemap()
+      window.treemapNeedsResize = null
+    }
+  }
+  $(document).ready(function() {
+    var signedIn = #{signed_in?}
+    d3.json(#{@json_url.inspect}, function(tree) {
+      buildTreemap(tree, {grouprank: 'phylum'})
+      $(window).resize(function() {
+        window.treemapNeedsResize = (new Date()).getTime()
+        setTimeout('treemapResizeHandler()', 500)
+      })
+    })
+    
+    if (!signedIn) {
+      $('#signin').dialog({title: "Welcome to Tricorder"})
+      return
+    }
+    $('#upload').dialog({title: "Upload FASTA"})
   })

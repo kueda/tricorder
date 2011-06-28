@@ -1,4 +1,12 @@
 Tricorder::Application.routes.draw do
+    # Riparian routes
+  resources :flow_tasks do
+    member do
+      get :run
+    end
+  end
+
+
   get "tricorder/index"
   get "tricorder/compare"
 

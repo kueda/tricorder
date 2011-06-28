@@ -1,7 +1,58 @@
+$(document).ready(function() {
+  $('.button').button()
+  $('.dialog').hide()
+});
+
+$('.dialog').live('dialogopen', function() {
+  $('#main').dim()
+  $('#main .dimmer').click(function() {
+    $('#upload').dialog('close')
+  })
+});
+$('.dialog').live('dialogclose', function() {
+  $('#main').undim()
+});
+
+// Dim a given element. Good for underlying modals
+(function($) {
+  $.fn.dim = function() {
+    if ($(this).css('position') == 'static') { 
+      $(this).css('position', 'relative')
+    }
+    var dimmer = $('<div class="dimmer"></div>').css({
+      display: 'none',
+      position: 'absolute',
+      left: 0,
+      top: 0,
+      width: '100%',
+      height: '100%',
+      opacity: 0.5,
+      backgroundColor: 'black',
+      'z-index': 100
+    })
+    $(this).append(dimmer)
+    dimmer.fadeIn()
+  }
+  $.fn.undim = function() {
+    $(this).find('.dimmer').fadeOut(function() {
+      $(this).remove()
+    })
+  }
+})(jQuery);
+
+function rebuildTreemap(options) {
+  options = options || {}
+  var container = $(options.div || '#treemap')
+  var tree = options.tree || container.data('tree')
+  buildTreemap(tree, container.data('treemapOptions'))
+}
+
 function buildTreemap(tree, options) {
   options = options || {}
   var container = $(options.div || '#treemap')
   container.html('')
+  container.data('treemapOptions', options)
+  container.data('tree', tree)
   var w = container.width(),
       h = $(window).height() - container.offset().top,
       color = options.colorScale || d3.scale.category20(),
