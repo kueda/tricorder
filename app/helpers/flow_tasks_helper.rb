@@ -10,7 +10,7 @@ module FlowTasksHelper
         "?flow_task_id=#{flow_task.id}"
       end
     else
-      send(url, :flow_tas_id => flow_task.id)
+      send(url, :flow_task_id => flow_task.id)
     end
   end
   

@@ -19,8 +19,9 @@ class FlowTasksController < ApplicationController
     @flow_task = klass.new(params[class_name])
     @flow_task.user = current_user
     if @flow_task.save
-      flash[:notice] = "Flow task created"
-      redirect_to run_flow_task_path(@flow_task)
+      flash[:notice] = "Task created"
+      @flow_task.update_attribute(:redirect_url, task_path(@flow_task.id))
+      redirect_to run_flow_task_path(@flow_task.id)
     else
       render :new
     end
@@ -34,7 +35,7 @@ class FlowTasksController < ApplicationController
   
   def destroy
     @flow_task.destroy
-    flash[:notice] = "Flow task destroyed"
+    flash[:notice] = "Task destroyed"
     redirect_to_back_or(flow_tasks_path)
   end
   

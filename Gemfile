@@ -9,3 +9,4 @@ gem "oa-openid"
 gem 'will_paginate'
 gem 'delayed_job'
 gem 'riparian'
+gem 'fastercsv'

@@ -4,8 +4,25 @@
     %title
       Tricorder
       = yield :title
-    = stylesheet_link_tag "tricorder-black/jquery-ui-1.8.13.custom", 'index'
-    = javascript_include_tag 'd3', 'd3.layout', :defaults
+    = stylesheet_link_tag "tricorder-black/jquery-ui-1.8.13.custom", 'jquery.pnotify.default', 'index'
+    = javascript_include_tag 'd3', 'd3.layout', :defaults, 'jquery.pnotify.min'
     = csrf_meta_tag
+    - if flash[:notice]
+      :javascript
+        $(document).ready(function() {
+          $.pnotify({
+            pnotify_title: 'Notice',
+            pnotify_text: #{escape_javascript(flash[:notice]).inspect}
+          })
+        })
+    - if flash[:error]
+      :javascript
+        $(document).ready(function() {
+          $.pnotify({
+            pnotify_title: 'Error',
+            pnotify_text: #{escape_javascript(flash[:error]).inspect},
+            pnotify_type: 'error'
+          })
+        })
   %body
     = yield

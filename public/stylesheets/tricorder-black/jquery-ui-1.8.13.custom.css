@@ -60,7 +60,7 @@
 .ui-widget .ui-widget { font-size: 1em; }
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: Verdana, Arial, sans-serif; font-size: 1em; }
 .ui-widget-content { border: 1px solid #111111; background: #111111 url(images/ui-bg_flat_25_111111_40x100.png) 50% 50% repeat-x; color: #ffffff; }
-.ui-widget-content a { color: #ffffff; }
+/*.ui-widget-content a { color: #ffffff; }*/
 .ui-widget-header { border: 1px solid #333333; background: #333333 url(images/ui-bg_flat_44_333333_40x100.png) 50% 50% repeat-x; color: #ffffff; font-weight: bold; }
 .ui-widget-header a { color: #ffffff; }
 

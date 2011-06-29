@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
   attr_accessible :provider, :uid, :name, :email
+  
+  has_many :flow_tasks, :dependent => :destroy
 
   def self.create_with_omniauth(auth)
     create! do |user|
