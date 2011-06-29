@@ -8,6 +8,7 @@
         %th= col.humanize
   %tbody
     - for flow_task in @flow_tasks
+      - flow_task = flow_task.becomes(FlowTask)
       %tr
         %td
           = link_to "##{flow_task.id}", flow_task_path(flow_task)
