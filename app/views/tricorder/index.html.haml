@@ -37,7 +37,7 @@
   %p To get started, sign in with
   
   .centered
-    - for provider, url in {:google => '/auth/google'}
+    - for provider, url in {:google => "#{root_path}auth/google"}
       = link_to provider, url, :class => "button"
 #upload.dialog
   = form_for ClassificationFlowTask.new, :url => flow_tasks_path, :html => {:multipart => true} do |f|

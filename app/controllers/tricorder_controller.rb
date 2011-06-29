@@ -1,6 +1,6 @@
 class TricorderController < ApplicationController
   def index
-    @json_url = "/demo.json"
+    @json_url = "#{root_path}demo.json"
     if @flow_task = FlowTask.find_by_id(params[:id])
       @rdp_output = @flow_task.outputs.detect{|i| i.file_file_name =~ /.rdp.json/}
     end
