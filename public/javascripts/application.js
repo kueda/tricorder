@@ -65,38 +65,100 @@ function buildTreemap(tree, options) {
     })
     .sticky(true)
     
-  var wrapper = d3.select('#treemap').append('div')
-    .attr('class', 'wrapper')
-    .style('position', 'relative')
-    .style('width', w + 'px')
-    .style('height', h + 'px');
+  var wrapper = d3.select('#treemap')
+    .append('svg:svg')
+      .attr('class', 'wrapper')
+      .attr('width', w )
+      .attr('height', h);
   
   window.nodes = treemap(tree)
-  var cells = wrapper.selectAll('div.cell')
-      .data(nodes)
+  var leafNodes = nodes.filter(function(n) { return !n.children })
+  var groupNodes = nodes.filter(function(n) { return n.data.rank == rank })
+  var ungroupedNodes = nodes.filter(function(n) { return !n.data.lineage[rank] })
+  var leafCells = wrapper.selectAll('g.leaf.cell')
+      .data(leafNodes)
     .enter()
-      .append('div')
-        .attr('class', function(n) {
-          var klass = 'cell'
-          if (!n.children) { klass += ' leaf'};
-          if (n.data.rank == rank) { klass += ' grouprank'};
-          if (!n.data.lineage[rank]) { klass += ' ungrouped'};
-          return klass
+      .append('svg:g')
+        .attr('class', 'leaf cell')
+        .style('overflow', 'hidden')
+        .attr("width", function(d) { return d.dx; })
+        .attr("height", function(d) { return d.dy; })
+        .attr('transform', function(d) {
+          return 'translate('+d.x+', '+d.y+')'
         })
-        .attr('title', function(n) { return rank + ': ' + n.data.lineage[rank]})
-        .call(cell);
-  var values = wrapper.selectAll('.leaf').append('div')
-    .attr('class', 'value')
-    .style("background", function(n) { 
-      return n.data.lineage[rank] ? color(n.data.lineage[rank]) : null; 
-    });
-  var groupValues = wrapper.selectAll('.grouprank').append('div')
-    .attr('class', 'value');
-  wrapper.selectAll('.value').append('label')
-    .style("color", function(n) { 
-      return n.data.rank == rank && n.data.lineage[rank] ? color(n.data.lineage[rank]) : null; 
-    })
-    .text(function(n) { return n.data.name + ' ('+n.value+')'; });
+        .attr('data-samples', function(n) { return n.data.samples; })
+      .append('svg:rect')
+        .style("fill", function(n) { 
+          return n.data.lineage[rank] ? color(n.data.lineage[rank]) : null; 
+        })
+        .style('stroke', 'white')
+        .style('stroke-width', 0.5)
+        .attr("width", function(d) { return d.dx; })
+        .attr("height", function(d) { return d.dy; });
+  var ungroupedCells = wrapper.selectAll('g.ungrouped.cell')
+      .data(ungroupedNodes)
+    .enter()
+      .append('svg:g')
+        .attr('class', 'ungrouped cell')
+        .attr('transform', function(d) {
+          return 'translate('+d.x+', '+d.y+')'
+        })
+      .append('svg:rect')
+        .style("fill", 'black')
+        .attr("width", function(d) { return d.dx; })
+        .attr("height", function(d) { return d.dy; });
+
+  var groupCells = wrapper.selectAll('g.group.cell')
+      .data(groupNodes)
+    .enter()
+      .append('svg:g')
+        .attr('class', 'group cell')
+        .attr('transform', function(d) {
+          return 'translate('+d.x+', '+d.y+')'
+        })
+      .append('svg:rect')
+        .style("fill", 'none')
+        .attr("stroke", 'black')
+        .attr("stroke-width", 3)
+        .attr('x', 1.5)
+        .attr('y', 1.5)
+        .attr("width", function(d) { return d.dx  - 3; })
+        .attr("height", function(d) { return d.dy - 3; });
+
+
+  wrapper.selectAll('.leaf.cell').append('svg:foreignObject')
+    .attr('width', function(d) { return d.dx })
+    .attr('height', function(d) { return d.dy })
+    .attr('fill', 'red')
+    .append('body')
+      .attr('xmlns', "http://www.w3.org/1999/xhtml")
+      .style('background-color', 'transparent')
+      .append('div')
+        .style('width',  function(d) { return d.dx + 'px' })
+        .style('height', function(d) { return d.dy + 'px' })
+        .style('display', 'table-cell')
+        .style('vertical-align', 'middle')
+        .style('text-align', 'center')
+        .style('text-shadow', '0 0 0.5em black')
+        .style('font-size', 'smaller')
+        .text(function(n) { return n.data.name + ' ('+n.value+')'; });
+  
+  wrapper.selectAll('.group.cell').append('svg:foreignObject')
+    .attr('x', 3)
+    .attr('y', 3)
+    .attr('width', function(d) { return d.dx - 6 })
+    .attr('height', function(d) { return d.dy - 6 })
+    .style('fill', 'none')
+    .append('body')
+      .attr('xmlns', "http://www.w3.org/1999/xhtml")
+      .style('background-color', 'transparent')
+      .append('span')
+        .style('display', 'inline-block')
+        .style('background-color', 'black')
+        .style('padding', '0 5px 5px 0')
+        .style('color', 'white')
+        .text(function(n) { return n.data.name + ' ('+n.value+')'; });
+  
 }
 
 function scaleTreemap(tree, dataUrl, options) {
@@ -133,8 +195,8 @@ function scaleTreemap(tree, dataUrl, options) {
 
 function cell() {
   this
-      .style("left", function(d) { return d.x + "px"; })
-      .style("top", function(d) { return d.y + "px"; })
-      .style("width", function(d) { return d.dx  + "px"; })
-      .style("height", function(d) { return d.dy + "px"; })
+      .attr("x", function(d) { return d.x; })
+      .attr("y", function(d) { return d.y; })
+      .attr("width", function(d) { return d.dx; })
+      .attr("height", function(d) { return d.dy; })
 }
