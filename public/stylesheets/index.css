@@ -22,3 +22,4 @@ ul.plain li { padding: 0; }
 
 .ui-pnotify-icon{ margin-top: 3px; }
 .ui-pnotify .ui-widget { box-shadow: 2px 2px 5px #666; }
+.ui-tooltip ul { padding-left: 2em; }

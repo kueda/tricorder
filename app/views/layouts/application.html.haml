@@ -4,8 +4,8 @@
     %title
       Tricorder
       = yield :title
-    = stylesheet_link_tag "tricorder-black/jquery-ui-1.8.13.custom", 'jquery.pnotify.default', 'index'
-    = javascript_include_tag 'd3', 'd3.layout', :defaults, 'jquery.pnotify.min'
+    = stylesheet_link_tag "tricorder-black/jquery-ui-1.8.13.custom", 'jquery.pnotify.default', 'jquery.qtip.min', 'index'
+    = javascript_include_tag 'd3', 'd3.layout', :defaults, 'jquery.pnotify.min', 'jquery.qtip.min', 'jquery.string.1.1.0-min'
     = csrf_meta_tag
     - if flash[:notice]
       :javascript

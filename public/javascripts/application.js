@@ -87,6 +87,8 @@ function buildTreemap(tree, options) {
           return 'translate('+d.x+', '+d.y+')'
         })
         .attr('data-samples', function(n) { return n.data.samples; })
+        .attr('data-name', function(n) { return n.data.name; })
+        .attr('data-rank', function(n) { return n.data.rank; })
       .append('svg:rect')
         .style("fill", function(n) { 
           return n.data.lineage[rank] ? color(n.data.lineage[rank]) : null; 
@@ -124,12 +126,10 @@ function buildTreemap(tree, options) {
         .attr('y', 1.5)
         .attr("width", function(d) { return d.dx  - 3; })
         .attr("height", function(d) { return d.dy - 3; });
-
-
+  
   wrapper.selectAll('.leaf.cell').append('svg:foreignObject')
     .attr('width', function(d) { return d.dx })
     .attr('height', function(d) { return d.dy })
-    .attr('fill', 'red')
     .append('body')
       .attr('xmlns', "http://www.w3.org/1999/xhtml")
       .style('background-color', 'transparent')
@@ -142,13 +142,12 @@ function buildTreemap(tree, options) {
         .style('text-shadow', '0 0 0.5em black')
         .style('font-size', 'smaller')
         .text(function(n) { return n.data.name + ' ('+n.value+')'; });
-  
+              
   wrapper.selectAll('.group.cell').append('svg:foreignObject')
     .attr('x', 3)
     .attr('y', 3)
     .attr('width', function(d) { return d.dx - 6 })
     .attr('height', function(d) { return d.dy - 6 })
-    .style('fill', 'none')
     .append('body')
       .attr('xmlns', "http://www.w3.org/1999/xhtml")
       .style('background-color', 'transparent')
@@ -159,6 +158,32 @@ function buildTreemap(tree, options) {
         .style('color', 'white')
         .text(function(n) { return n.data.name + ' ('+n.value+')'; });
   
+  $('.cell.leaf').qtip({
+    style: {
+      widget: true,
+      classes: 'ui-tooltip-shadow'
+    },
+    position: {
+      viewport: $(window),
+      adjust: {
+        x: -10,
+        y: -10,
+        method: 'shift'
+      }
+    },
+    content: {
+      title: function() {
+        return $.string($(this).attr('data-rank')).capitalize().str + ': ' + $(this).attr('data-name') + ' Samples'
+      },
+      text: function() {
+        var ul = $('<ul></ul>')
+        $.each($(this).attr('data-samples').split(','), function() {
+          ul.append($('<li>'+this+'</li>'))
+        })
+        return ul;
+      }
+    }
+  })
 }
 
 function scaleTreemap(tree, dataUrl, options) {
