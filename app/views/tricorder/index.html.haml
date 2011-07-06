@@ -9,14 +9,6 @@
           Showing
           %strong
             = @flow_task.inputs.first.file_file_name
-        - if @abundance_url
-          %label Scale by
-          %span#scaletoggle
-            %input{:type => "radio", :name => "scaletoggle", :id => "scaletoggle_on", :checked => "checked"}
-            %label{:for => "scaletoggle_on"}
-              = @abundance_input.file_file_name
-            %input{:type => "radio", :name => "scaletoggle", :id => "scaletoggle_off"}
-            %label{:for => "scaletoggle_off"} Count
       %li
         = link_to_function "recent", "$('#recent').dialog({title: 'Recent Tasks'})"
       - if signed_in?
@@ -33,7 +25,18 @@
       - else
         %li
           = link_to "sign in", signin_path
-  
+
+#tools.small
+  - if @abundance_url
+    -# %label Scale by
+    %span#scaletoggle
+      %input{:type => "radio", :name => "scaletoggle", :id => "scaletoggle_on", :checked => "checked"}
+      %label{:for => "scaletoggle_on"}
+        Scale by
+        = @abundance_input.file_file_name
+      %input{:type => "radio", :name => "scaletoggle", :id => "scaletoggle_off"}
+      %label{:for => "scaletoggle_off"} Scale by count
+
 #welcome{:style => "display:none"}
   Welcome to Tricorder, a treemap-based taxonomic visualization for
   metagenomic samples.
