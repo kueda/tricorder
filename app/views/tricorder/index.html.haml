@@ -9,6 +9,14 @@
           Showing
           %strong
             = @flow_task.inputs.first.file_file_name
+        - if @abundance_url
+          %label Scale by
+          %span#scaletoggle
+            %input{:type => "radio", :name => "scaletoggle", :id => "scaletoggle_on", :checked => "checked"}
+            %label{:for => "scaletoggle_on"}
+              = @abundance_input.file_file_name
+            %input{:type => "radio", :name => "scaletoggle", :id => "scaletoggle_off"}
+            %label{:for => "scaletoggle_off"} Count
       %li
         = link_to_function "recent", "$('#recent').dialog({title: 'Recent Tasks'})"
       - if signed_in?
@@ -42,7 +50,16 @@
 #upload.dialog
   = form_for ClassificationFlowTask.new, :url => flow_tasks_path, :html => {:multipart => true} do |f|
     = f.fields_for :inputs, f.object.inputs.build do |fi|
-      = fi.file_field :file, :class => "stacked", :required => "true"
+      <label for="fasta_file">FASTA</label>
+      = fi.file_field :file, :class => "stacked", :required => "true", :id => "fasta_file"
+    %p
+      = f.fields_for :inputs, f.object.inputs.build do |fi|
+        <label for="abundance_file">Abundances (optional)</label>
+        = fi.file_field :file, :class => "stacked", :required => "true", :id => "abundance_file"
+        %span.small.meta
+          Tab-delimited file with SAMPLE and ABUNDANCE column. SAMPLE must
+          match the FASTA identifier exactly.
+      
     
     .centered
       = f.submit "Visualize", :class => "button"
@@ -91,6 +108,17 @@
         window.treemapNeedsResize = (new Date()).getTime()
         setTimeout('treemapResizeHandler()', 500)
       })
+      
+      if (#{@abundance_url ? 'true' : 'false'}) {
+        scaleTreemap(tree, '#{@abundance_url}', {grouprank: 'phylum', duration: 0})
+        $('#scaletoggle').buttonset()
+        $('#scaletoggle_on').click(function() {
+          scaleTreemap(tree, '#{@abundance_url}', {grouprank: 'phylum', duration: 1000})
+        })
+        $('#scaletoggle_off').click(function() {
+          scaleTreemap(tree, null, {grouprank: 'phylum', duration: 1000})
+        })
+      }
     })
     
     if (!signedIn) {
