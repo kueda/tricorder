@@ -12,7 +12,8 @@
         $(document).ready(function() {
           $.pnotify({
             pnotify_title: 'Notice',
-            pnotify_text: #{escape_javascript(flash[:notice]).inspect}
+            pnotify_text: #{escape_javascript(flash[:notice]).inspect},
+            pnotify_stack: {"dir1": "down", "dir2": "left", "firstpos1": 50, "firstpos2": 10}
           })
         })
     - if flash[:error]

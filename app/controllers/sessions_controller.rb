@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
   def new
-    redirect_to "#{root_path}auth/openid?identifier=https://www.google.com/accounts/o8/id"
+    redirect_to "#{root_path}auth/google"
   end
 
   def create

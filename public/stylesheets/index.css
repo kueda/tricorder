@@ -19,6 +19,7 @@ input[type=file] { color: #aaa; max-width: 250px; }
 ul.plain { padding: 0; list-style: none; }
 ul.plain li { padding: 0; }
 
-.ui-pnotify-icon{ margin-top: 3px; }
+.ui-pnotify-icon { margin-top: 3px; }
 .ui-pnotify .ui-widget { box-shadow: 2px 2px 5px #666; }
+.ui-pnotify-history-container { display: none; }
 .ui-tooltip ul { padding-left: 2em; }
