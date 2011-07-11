@@ -6,7 +6,7 @@ $(document).ready(function() {
 $('.dialog').live('dialogopen', function() {
   $('#main').dim()
   $('#main .dimmer').click(function() {
-    $('#upload').dialog('close')
+    $('.dialog').dialog('close')
   })
 });
 $('.dialog').live('dialogclose', function() {
@@ -259,8 +259,9 @@ function buildTreemap(tree, options) {
         return $.string($(this).attr('data-rank')).capitalize().str + ': ' + $(this).attr('data-name') + ' Samples'
       },
       text: function() {
-        var ul = $('<ul></ul>')
-        $.each($(this).attr('data-samples').split(','), function() {
+        var ul = $('<ul></ul>'),
+            samples = $(this).attr('data-samples') || ''
+        $.each(samples.split(','), function() {
           ul.append($('<li>'+this+'</li>'))
         })
         return ul;
@@ -343,4 +344,10 @@ function cell() {
       .attr("y", function(d) { return d.y; })
       .attr("width", function(d) { return d.dx; })
       .attr("height", function(d) { return d.dy; })
+}
+
+function tricorderDialog(selector, options) {
+  options = options || {}
+  $('.dialog').dialog('close')
+  $(selector).dialog(options)
 }

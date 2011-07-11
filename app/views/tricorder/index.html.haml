@@ -18,12 +18,12 @@
             %input{:type => "radio", :name => "scaletoggle", :id => "scaletoggle_off"}
             %label{:for => "scaletoggle_off"} Count
       %li
-        = link_to_function "recent", "$('#recent').dialog({title: 'Recent Tasks'})"
+        = link_to_function "recent", "tricorderDialog('#recent', {title: 'Recent Tasks'})"
       - if signed_in?
         %li
-          = link_to_function "your tasks", "$('#tasks').dialog({title: 'Your Tasks'})"
+          = link_to_function "your tasks", "tricorderDialog('#tasks', {title: 'Your Tasks'})"
         %li
-          = link_to_function "upload", "$('#upload').dialog({title: 'Upload FASTA'})"
+          = link_to_function "upload", "tricorderDialog('#upload', {title: 'Upload FASTA'})"
         -# %li
         -#   = link_to_function "compare", "$('#compare').dialog({title: 'Compare Tasks'})"
         %li
@@ -122,9 +122,9 @@
     })
     
     if (!signedIn) {
-      $('#signin').dialog({title: "Welcome to Tricorder"})
+      tricorderDialog('#signin', {title: "Welcome to Tricorder"})
       return
     } else if (!flowTask) {
-      $('#upload').dialog({title: "Upload FASTA"})
+      tricorderDialog('#upload', {title: "Upload FASTA"})
     }
   })
