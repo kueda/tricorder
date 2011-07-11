@@ -27,7 +27,7 @@ $('.dialog').live('dialogclose', function() {
       width: '100%',
       height: '100%',
       opacity: 0.5,
-      backgroundColor: 'black',
+      backgroundColor: '#111111',
       'z-index': 100
     })
     $(this).append(dimmer)
@@ -88,7 +88,7 @@ function cellStyle(selection, options) {
           return 'none'
         }
         else if (!n.data.lineage[rank]) {
-          return 'black'
+          return '#111111'
         }
       })
       .style('stroke', function(n) {
@@ -96,7 +96,7 @@ function cellStyle(selection, options) {
           return 'white'; 
         }
         else if (n.data.rank == rank) {
-          return 'black'
+          return '#111111'
         }
         else if (!n.data.lineage[rank]) {
           return 'white'
@@ -133,7 +133,7 @@ function ungroupedStyle() {
   this
     .style('visibility', 'visible')
     .select('rect')
-      .style("fill", 'black')
+      .style("fill", '#111111')
 }
 
 function groupStyle() {
@@ -141,7 +141,7 @@ function groupStyle() {
     .style('visibility', 'visible')
     .select('rect')
       .style("fill", 'none')
-      .attr("stroke", 'black')
+      .attr("stroke", '#111111')
       .attr("stroke-width", 3);
   this
     .select('foreignObject')
@@ -183,7 +183,7 @@ function groupLabel() {
         .style('background-color', 'transparent')
         .append('span')
           .style('display', 'inline-block')
-          .style('background-color', 'black')
+          .style('background-color', '#111111')
           .style('padding', '0 5px 5px 0')
           .style('color', 'white')
           .text(function(n) { return n.data.name + ' ('+n.value+')'; });
@@ -248,10 +248,12 @@ function buildTreemap(tree, options) {
     },
     position: {
       viewport: $(window),
+      my: 'top left',
+      at: 'center',
       adjust: {
-        x: -10,
-        y: -10,
-        method: 'shift'
+        x: 20,
+        y: 20,
+        method: 'flip'
       }
     },
     content: {

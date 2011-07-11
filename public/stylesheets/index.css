@@ -23,3 +23,14 @@ ul.plain li { padding: 0; }
 .ui-pnotify .ui-widget { box-shadow: 2px 2px 5px #666; }
 .ui-pnotify-history-container { display: none; }
 .ui-tooltip ul { padding-left: 2em; }
+
+#tools {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  text-align: right;
+  z-index: 1000;
+  opacity: 0.5;
+}
+
+#tools:hover { opacity: 1; }

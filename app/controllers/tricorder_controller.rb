@@ -7,7 +7,7 @@ class TricorderController < ApplicationController
         @abundance_url = @abundance_input.file.url
       end
     end
-    @json_url = "#{root_url.sub(/\/$/, '')}#{@rdp_output.file.url}" if @rdp_output
+    @json_url = @rdp_output.file.url if @rdp_output
     
     if signed_in?
       @user_tasks = current_user.flow_tasks.order("id desc").paginate(:page => 1)
