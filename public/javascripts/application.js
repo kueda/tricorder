@@ -303,7 +303,7 @@ function scaleTreemap(tree, dataUrl, options) {
     
     var treemap = container.data('treemap').value(function(d) {
       return d3.sum(d.samples, function(s) { 
-        // var key = s.split('|')[0]
+        // s = s.split('|')[0]
         return abundances[s] || 1
       })
     })

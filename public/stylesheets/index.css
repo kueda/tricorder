@@ -34,3 +34,5 @@ ul.plain li { padding: 0; }
 }
 
 #tools:hover { opacity: 1; }
+
+.ui-button-text select { margin: 0; }
