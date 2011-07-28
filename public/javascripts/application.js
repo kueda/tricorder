@@ -122,7 +122,7 @@ function leafStyle(selection, options) {
   this
     .style('visibility', 'visible')
     .select('rect')
-      .style("fill", function(n) { 
+      .style("fill", function(n) {
         return n.data.lineage[rank] ? color(n.data.lineage[rank]) : null; 
       })
       .style('stroke', 'white')
@@ -207,11 +207,26 @@ function buildTreemap(tree, options) {
   treemap = treemap.size([w, h])
   container.data('treemap', treemap)
     
-  var wrapper = d3.select('#treemap')
+  var wrapper = d3.select(container.get(0))
     .append('svg:svg')
       .attr('class', 'wrapper')
       .attr('width', w )
       .attr('height', h);
+  
+  // create a hash pattern for hashed backgrounds
+  wrapper.append('svg:defs').append('svg:pattern')
+    .attr('id', 'hashpattern')
+    .attr('x', 0)
+    .attr('y', 0)
+    .attr('width', 10)
+    .attr('height', 10)
+    .attr('patternUnits', 'userSpaceOnUse')
+    .append('svg:path')
+      .attr('d', 'M 10 0 L 0 10')
+      .attr('fill', 'none')
+      .attr('stroke', 'black')
+      .attr('stroke-width', 1)
+      .style('opacity', 0.2)
   
   var nodes = treemap(tree)
   var leafNodes = nodes.filter(function(n) { return !n.children })
@@ -241,34 +256,49 @@ function buildTreemap(tree, options) {
   wrapper.selectAll('.group.cell').call(groupLabel).call(groupStyle, options)
   wrapper.selectAll('.leaf.cell').call(leafLabel).call(leafStyle, options)
   
-  $('.cell.leaf').qtip({
-    style: {
-      widget: true,
-      classes: 'ui-tooltip-shadow'
-    },
-    position: {
-      viewport: $(window),
-      my: 'top left',
-      at: 'center',
-      adjust: {
-        x: 20,
-        y: 20,
-        method: 'flip'
-      }
-    },
-    content: {
-      title: function() {
-        return $.string($(this).attr('data-rank')).capitalize().str + ': ' + $(this).attr('data-name') + ' Samples'
+  $(container).find('.cell.leaf').each(function() {
+    var enterEventType = 'tooltip' + $(this).attr('data-name')+'Enter'
+    var exitEventType = 'tooltip' + $(this).attr('data-name')+'Exit'
+    $(this).qtip({
+      style: {
+        widget: true,
+        classes: 'ui-tooltip-shadow'
       },
-      text: function() {
-        var ul = $('<ul></ul>'),
-            samples = $(this).attr('data-samples') || ''
-        $.each(samples.split(','), function() {
-          ul.append($('<li>'+this+'</li>'))
-        })
-        return ul;
+      position: {
+        viewport: $(window),
+        my: 'top left',
+        at: 'center',
+        adjust: {
+          x: 20,
+          y: 20,
+          method: 'flip'
+        }
+      },
+      show: 'mouseenter ' + enterEventType,
+      hide: 'unfocus ' + exitEventType,
+      content: {
+        title: function() {
+          return $.string($(this).attr('data-rank')).capitalize().str + ': ' + $(this).attr('data-name') + ' Samples'
+        },
+        text: function() {
+          var ul = $('<ul></ul>'),
+              samples = $(this).attr('data-samples') || ''
+          $.each(samples.split(','), function() {
+            ul.append($('<li>'+this+'</li>'))
+          })
+          return ul;
+        }
       }
-    }
+    })
+    
+    // trigger custom events on mouse actions for triggering multiple 
+    // tooltips when comparing
+    $(this).mouseenter(function() {
+      $('.cell.leaf').trigger(enterEventType)
+    })
+    $(this).mouseleave(function() {
+      $('.cell.leaf').trigger(exitEventType)
+    })
   })
 }
 

@@ -1,0 +1,103 @@
+#header
+  .inner
+    %h1
+      = link_to "Tricorder", root_path
+    %ul.menu.right
+      - if @flow_task
+        %li{:style => "margin-right: 20px;"}
+          Showing
+          %strong
+            = @flow_task.inputs.first.file_file_name
+      %li
+        = link_to_function "recent", "tricorderDialog('#recent', {title: 'Recent Tasks'})"
+      - if signed_in?
+        %li
+          = link_to_function "your tasks", "tricorderDialog('#tasks', {title: 'Your Tasks'})"
+        %li
+          = link_to_function "upload", "tricorderDialog('#upload', {title: 'Upload FASTA'})"
+        - if @flow_task
+          %li
+            = link_to_function "compare", "$('#compare').dialog({title: 'Compare Tasks'})"
+        %li
+          Welcome,
+          = truncate (current_user.try(:name) || current_user.email).split.first, :lenght => 100
+          = link_to "(Sign out)", signout_path, :class => "small"
+      - else
+        %li
+          = link_to "sign in", signin_path
+
+#welcome{:style => "display:none"}
+  Welcome to Tricorder, a treemap-based taxonomic visualization for
+  metagenomic samples.
+
+#signin.dialog
+  %p
+    Tricorder helps you get a feel for what kinds of organisms exist in a pool
+    of biological sequence data.
+  %p To get started, sign in with
+
+  .centered
+    - for provider, url in {:google => "#{root_path}auth/google"}
+      = link_to provider, url, :class => "button"
+#upload.dialog
+  = form_for ClassificationFlowTask.new, :url => flow_tasks_path, :html => {:multipart => true} do |f|
+    = f.fields_for :inputs, f.object.inputs.build do |fi|
+      <label for="fasta_file">FASTA</label>
+      = fi.file_field :file, :class => "stacked", :required => "true", :id => "fasta_file"
+    %p
+      = f.fields_for :inputs, f.object.inputs.build do |fi|
+        <label for="abundance_file">Abundances (optional)</label>
+        = fi.file_field :file, :class => "stacked", :required => "true", :id => "abundance_file"
+        %span.small.meta
+          Tab-delimited file with SAMPLE and ABUNDANCE column. SAMPLE must
+          match the FASTA identifier exactly.
+
+
+    .centered
+      = f.submit "Visualize", :class => "button"
+
+#tasks.dialog
+  - if @user_tasks
+    %ul.plain
+      - for flow_task in @user_tasks
+        %li.stacked
+          = link_to flow_task.to_param, task_path(flow_task.id)
+          .small.meta
+            = flow_task.created_at.to_s(:long)
+            = link_to "Delete", flow_task_path(flow_task.id), :method => :delete, :confirm => "Are you sure?"
+  - else
+    You haven't run any tasks yet.  Try uploading something.
+#recent.dialog
+  - if @recent_tasks
+    %ul.plain
+      - for flow_task in @recent_tasks
+        %li.stacked
+          = link_to flow_task.to_param, task_path(flow_task.id)
+          .small.meta
+            Run by
+            = flow_task.user.try(:name)
+            on
+            = flow_task.created_at.to_s(:long)
+  - else
+    No one has run any tasks yet.  Try uploading something.
+
+- if @flow_task
+  #compare.dialog
+    - if @user_tasks
+      Your Tasks
+      %ul.plain
+        - for flow_task in @user_tasks
+          %li.stacked
+            = link_to flow_task.to_param, compare_path(@flow_task.id, flow_task.id)
+            .small.meta
+              = flow_task.created_at.to_s(:long)
+    - if @recent_tasks
+      %ul.plain
+        - for flow_task in @recent_tasks
+          %li.stacked
+            = link_to flow_task.to_param, compare_path(@flow_task.id, flow_task.id)
+            .small.meta
+              Run by
+              = flow_task.user.try(:name)
+              on
+              = flow_task.created_at.to_s(:long)

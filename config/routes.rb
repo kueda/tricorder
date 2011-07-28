@@ -8,7 +8,7 @@ Tricorder::Application.routes.draw do
 
 
   get ":id", :to => "tricorder#index", :as => "task", :constraints => {:id => /\d+/}
-  get "tricorder/compare"
+  get ":id/compare/:other_id", :to => "tricorder#compare", :as => "compare", :constraints => {:id => /\d+/, :other_id => /\d+/}
 
     # Riparian routes
   resources :flow_tasks do

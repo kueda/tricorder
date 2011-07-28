@@ -36,3 +36,12 @@ ul.plain li { padding: 0; }
 #tools:hover { opacity: 1; }
 
 .ui-button-text select { margin: 0; }
+.ui-widget-header { font-weight: normal;}
+
+.compare { display: table; border-collapse: collapse; }
+.compare .treemaps { display: table-row; }
+.compare .treemaps .treemap { display: table-cell; width: 50%; padding: 5px; }
+
+.treemap.ui-widget .ui-widget-header {
+  padding: .4em 1em;
+}

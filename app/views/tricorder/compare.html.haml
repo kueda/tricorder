@@ -1,2 +1,88 @@
-%h1 Tricorder#compare
-%p Find me in app/views/tricorder/compare.html.haml
+= render :partial => 'header'
+
+#main.compare
+  .treemaps
+    #treemap.treemap.ui-widget
+      .ui-widget-header.ui-corner-all
+        = link_to @flow_task.to_param, task_path(@flow_task.id)
+      .vis
+    #othertreemap.treemap.ui-widget
+      .ui-widget-header.ui-corner-all
+        = link_to @other_flow_task.to_param, task_path(@other_flow_task.id)
+      .vis
+
+:javascript
+  window.rankNameCounts = {}
+  
+  function treemapForUrl(url, options) {
+    options = options || {}
+    options.grouprank = options.grouprank || $('#grouprank').val() || 'phylum'
+    d3.json(url, function(tree) {
+      buildTreemap(tree, options)
+      
+      $(options.div).find('.cell.leaf').each(function() {
+        // find ranks used multiple times
+        var name = $(this).attr('data-name'),
+            existing = window.rankNameCounts[name];
+        window.rankNameCounts[name] = existing ? existing + 1 : 1
+      })
+      
+      markMatchingCells()
+    })
+  }
+  
+  function markMatchingCells() {
+    // for (var name in window.rankNameCounts) {
+    //   if (window.rankNameCounts[name] > 1) {
+    //     d3.selectAll('.cell.leaf[data-name="'+name+'"]').each(function() {
+    //       var rect = d3.select(this).select('rect')
+    //       if (d3.select(this).select('.hash').empty()) {
+    //         d3.select(this).insert('svg:rect', '.label')
+    //           .style('fill', 'url(#hashpattern)')
+    //           .attr('width', rect.attr('width'))
+    //           .attr('height', rect.attr('height'))
+    //           .attr('class', 'hash')
+    //       }
+    //     })
+    //   }
+    // }
+    d3.selectAll('.cell.leaf').each(function() {
+      var name = $(this).attr('data-name');
+      if (window.rankNameCounts[name] > 1) {
+        d3.selectAll('.cell.leaf[data-name="'+name+'"]').each(function() {
+          d3.select(this).attr('class', 'highlight ' + d3.select(this).attr('class'))
+        })
+      }
+      
+      $(this).mouseenter(function() {
+        d3.select(this).attr('class', 'highlight ' + d3.select(this).attr('class'))
+      })
+      $(this).mouseleave(function() {
+        d3.select(this).attr('class', d3.select(this).attr('class').replace(/highlight /, ''))
+      })
+    })
+  }
+  
+  var colorScale = d3.scale.category20()
+  
+  window.treemapResizeHandler = function() {
+    var now = (new Date()).getTime()
+    if (treemapNeedsResize && now - treemapNeedsResize > 400) {
+      rebuildTreemap({div: '#treemap .vis', colorScale: colorScale})
+      rebuildTreemap({div: '#othertreemap .vis', colorScale: colorScale})
+      window.treemapNeedsResize = null
+      markMatchingCells()
+    }
+  }
+  
+  treemapForUrl(#{@json_url.inspect}, {div: '#treemap .vis', colorScale: colorScale})
+  treemapForUrl(#{@other_json_url.inspect}, {div: '#othertreemap .vis', colorScale: colorScale})
+  
+  $(window).resize(function() {
+    window.treemapNeedsResize = (new Date()).getTime()
+    setTimeout('treemapResizeHandler()', 500)
+  })
+  
+:css
+  .cell.leaf { opacity: 0.7; }
+  .cell.leaf.highlight { opacity: 1; }
