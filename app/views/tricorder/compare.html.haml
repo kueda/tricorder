@@ -65,9 +65,13 @@
   
   var colorScale = d3.scale.category20()
   
+  var resizeTimeout = 200
+  
   window.treemapResizeHandler = function() {
     var now = (new Date()).getTime()
-    if (treemapNeedsResize && now - treemapNeedsResize > 400) {
+    if (treemapNeedsResize && now - treemapNeedsResize > resizeTimeout - 100) {
+      $('#treemap .vis').html('')
+      $('#othertreemap .vis').html('')
       rebuildTreemap({div: '#treemap .vis', colorScale: colorScale})
       rebuildTreemap({div: '#othertreemap .vis', colorScale: colorScale})
       window.treemapNeedsResize = null
@@ -80,7 +84,7 @@
   
   $(window).resize(function() {
     window.treemapNeedsResize = (new Date()).getTime()
-    setTimeout('treemapResizeHandler()', 500)
+    setTimeout('treemapResizeHandler()', resizeTimeout)
   })
   
 :css
