@@ -47,7 +47,7 @@
     %p
       = f.fields_for :inputs, f.object.inputs.build do |fi|
         <label for="abundance_file">Abundances (optional)</label>
-        = fi.file_field :file, :class => "stacked", :required => "true", :id => "abundance_file"
+        = fi.file_field :file, :class => "stacked", :id => "abundance_file"
         %span.small.meta
           Tab-delimited file with SAMPLE and ABUNDANCE column. SAMPLE must
           match the FASTA identifier exactly.
@@ -83,7 +83,9 @@
 
 - if @flow_task
   #compare.dialog
-    - if @user_tasks
+    - if @user_tasks.blank? && @recent_tasks.blank?
+      No tasks to compare!
+    - if !@user_tasks.blank?
       Your Tasks
       %ul.plain
         - for flow_task in @user_tasks
@@ -91,7 +93,8 @@
             = link_to flow_task.to_param, compare_path(@flow_task.id, flow_task.id)
             .small.meta
               = flow_task.created_at.to_s(:long)
-    - if @recent_tasks
+    - if !@recent_tasks.blank?
+      Recent Tasks
       %ul.plain
         - for flow_task in @recent_tasks
           %li.stacked

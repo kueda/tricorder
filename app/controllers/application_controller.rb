@@ -35,6 +35,7 @@ class ApplicationController < ActionController::Base
     def redirect_to_back_or(alt, options = {})
       url = request.env['HTTP_REFERER'] || alt
       url = alt if url == request.url
+      url = '/' if url == request.url
       redirect_to(url, options)
     end
 

@@ -23,6 +23,9 @@
                   = link_to "#{input.resource_type}: #{input.resource.to_param}", input.resource
                 - else
                   = link_to input.file_file_name, input.file.url
+                %span.meta
+                  = number_with_delimiter(input.file_file_size / 1024) if input.file_file_size
+                  k
         %td
           %ul
             - for output in flow_task.outputs
@@ -31,5 +34,8 @@
                   = link_to "#{output.resource_type}: #{output.resource.to_param}", input.resource
                 - else
                   = link_to output.file_file_name, output.file.url
+                %span.meta
+                  = number_with_delimiter(output.file_file_size / 1024) if output.file_file_size
+                  k
 
 = will_paginate @flow_tasks

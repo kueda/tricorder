@@ -23,7 +23,15 @@ class FlowTasksController < ApplicationController
       @flow_task.update_attribute(:redirect_url, task_path(@flow_task.id))
       redirect_to run_flow_task_path(@flow_task.id)
     else
-      render :new
+      if file_size_error = @flow_task.errors.delete(:"inputs.file_file_size")
+        flash[:error] = "Input file cannot be empty"
+        unless @flow_task.errors.blank?
+          flash[:error] += " and #{@flow_task.errors.full_messages.to_sentence}"
+        end
+      else
+        flash[:error] = @flow_task.errors.full_messages.to_sentence
+      end
+      redirect_to root_url
     end
   end
   

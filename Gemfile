@@ -9,5 +9,5 @@ gem "omniauth"
 gem "oa-openid"
 gem 'will_paginate'
 gem 'delayed_job'
-gem 'riparian', :git => 'git://whewellite.berkeley.edu/var/git/riparian'
+gem 'riparian' , :git => 'git://whewellite.berkeley.edu/var/git/riparian'
 gem 'fastercsv'
