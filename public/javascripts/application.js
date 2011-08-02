@@ -192,6 +192,7 @@ function groupLabel() {
 function buildTreemap(tree, options) {
   options = options || {}
   var container = $(options.div || '#treemap')
+  container.addClass('treemapvis')
   container.html('')
   container.data('treemapOptions', options)
   container.data('tree', tree)
@@ -302,12 +303,15 @@ function buildTreemap(tree, options) {
   })
 }
 
-function scaleTreemap(tree, dataUrl, options) {
+function scaleTreemap(container, dataUrl, options) {
   options = options || {}
   var rank = options.grouprank || DEFAULT_RANK,
       duration = options.duration == 0 ? 0 : (options.duration || 1000),
-      container = $(options.div || '#treemap'),
-      wrapper = d3.select(options.div || '#treemap').select('.wrapper');
+      // container = $(options.div || '#treemap'),
+      container = $(container),
+      container = container.hasClass('treemapvis') ? container : container.find('.treemapvis'),
+      tree = container.data('tree'),
+      wrapper = d3.select(container.get(0)).select('.wrapper');
   var cells = wrapper.selectAll('.cell')
   if (!dataUrl) {
     var treemap = container.data('treemap').value(function(d) { return d.count; })
@@ -382,4 +386,40 @@ function tricorderDialog(selector, options) {
   options = options || {}
   $('.dialog').dialog('close')
   $(selector).dialog(options)
+}
+
+function buildScaleToggles(options) {
+  $('.scaletoggle').each(function() {
+    if ($(this).hasClass('built')) { return };
+    $(this).addClass('built')
+    var url = $(this).attr('data-url')
+    if (!url) { return }
+    var options = options || {},
+        container = $($(this).attr('rel') || $(this).parents('.treemap').get(0) || '#treemap')
+        container = container.hasClass('treemapvis') ? container : container.find('.treemapvis'),
+        tree = container.data('tree'),
+        grouprankSelect = $(this).parents('.tools').find('.grouprankcontrol select');
+    
+    $(this).buttonset()
+    
+    scaleTreemap(container, url, $.extend({}, options, {
+      grouprank: grouprankSelect.val(), 
+      duration: 1000
+    }))
+    
+    $(this).find('.scaletoggle_on').click(function() {
+      var grouprankSelect = $(this).parents('.tools').find('.grouprankcontrol select');
+      scaleTreemap(container, url, $.extend({}, options, {
+        grouprank: grouprankSelect.val(), 
+        duration: 1000
+      }))
+    })
+    $(this).find('.scaletoggle_off').click(function() {
+      var grouprankSelect = $(this).parents('.tools').find('.grouprankcontrol select');
+      scaleTreemap(container, null, $.extend({}, options, {
+        grouprank: grouprankSelect.val(), 
+        duration: 1000
+      }))
+    })
+  })
 }

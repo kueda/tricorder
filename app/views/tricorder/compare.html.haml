@@ -3,13 +3,19 @@
 #main.compare
   .treemaps
     #treemap.treemap.ui-widget
-      .ui-widget-header.ui-corner-all
-        = link_to @flow_task.to_param, task_path(@flow_task.id)
-      .vis
+      .wrapper{:style => "position: relative;"}
+        .ui-widget-header.ui-corner-all
+          = link_to @flow_task.to_param, task_path(@flow_task.id)
+        .vis
+        .tools.small
+          = render "tools", :abundance_input => @abundance_input
     #othertreemap.treemap.ui-widget
-      .ui-widget-header.ui-corner-all
-        = link_to @other_flow_task.to_param, task_path(@other_flow_task.id)
-      .vis
+      .wrapper{:style => "position: relative;"}
+        .ui-widget-header.ui-corner-all
+          = link_to @other_flow_task.to_param, task_path(@other_flow_task.id)
+        .vis
+        .tools.small
+          = render "tools", :abundance_input => @other_abundance_input
 
 :javascript
   window.rankNameCounts = {}
@@ -28,6 +34,7 @@
       })
       
       markMatchingCells()
+      buildScaleToggles(options)
     })
   }
   
@@ -85,6 +92,16 @@
   $(window).resize(function() {
     window.treemapNeedsResize = (new Date()).getTime()
     setTimeout('treemapResizeHandler()', resizeTimeout)
+  })
+  
+  $('.grouprankcontrol select').change(function() {
+    var container = $(this).parents('.treemap')
+    container = container.hasClass('treemapvis') ? container : container.find('.treemapvis')
+    var options = container.data('treemapOptions') || {}
+    options.grouprank = $(this).val()
+    container.data('treemapOptions', options)
+    rebuildTreemap({div: container})
+    markMatchingCells()
   })
   
 :css

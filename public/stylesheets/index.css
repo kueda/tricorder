@@ -24,7 +24,7 @@ ul.plain li { padding: 0; }
 .ui-pnotify-history-container { display: none; }
 .ui-tooltip ul { padding-left: 2em; }
 
-#tools {
+.tools {
   position: absolute;
   right: 10px;
   bottom: 10px;
@@ -33,7 +33,7 @@ ul.plain li { padding: 0; }
   opacity: 0.5;
 }
 
-#tools:hover { opacity: 1; }
+.tools:hover { opacity: 1; }
 
 .ui-button-text select { margin: 0; }
 .ui-widget-header { font-weight: normal;}

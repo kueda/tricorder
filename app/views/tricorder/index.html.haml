@@ -1,18 +1,7 @@
 = render :partial => 'header'
 
-#tools.small
-  - if @abundance_url
-    %span#scaletoggle.inlineblock
-      %input{:type => "radio", :name => "scaletoggle", :id => "scaletoggle_on", :checked => "checked"}
-      %label{:for => "scaletoggle_on"}
-        Scale by
-        = @abundance_input.file_file_name
-      %input{:type => "radio", :name => "scaletoggle", :id => "scaletoggle_off"}
-      %label{:for => "scaletoggle_off"} Scale by count
-  #grouprankcontrol.inlineblock.ui-state-active.ui-button.ui-widget.ui-button-text-only.ui-corner-all
-    %span.ui-button-text
-      Group by
-      = select_tag :grouprank, options_for_select(%w(phylum class order family), :selected => "phylum")
+.tools.small
+  = render :partial => 'tools'
 
 #main
   #treemap
@@ -34,17 +23,7 @@
         window.treemapNeedsResize = (new Date()).getTime()
         setTimeout('treemapResizeHandler()', 500)
       })
-      
-      if (#{@abundance_url ? 'true' : 'false'}) {
-        scaleTreemap(tree, '#{@abundance_url}', {grouprank: $('#grouprank').val(), duration: 0})
-        $('#scaletoggle').buttonset()
-        $('#scaletoggle_on').click(function() {
-          scaleTreemap(tree, '#{@abundance_url}', {grouprank: $('#grouprank').val(), duration: 1000})
-        })
-        $('#scaletoggle_off').click(function() {
-          scaleTreemap(tree, null, {grouprank: $('#grouprank').val(), duration: 1000})
-        })
-      }
+      buildScaleToggles()
     })
     
     if (!signedIn) {
@@ -54,10 +33,12 @@
       tricorderDialog('#upload', {title: "Upload FASTA"})
     }
     
-    $('#grouprank').change(function() {
-      var options = $('#treemap').data('treemapOptions') || {}
+    $('.grouprankcontrol select').change(function() {
+      var container = $('#treemap')
+      // container = container.hasClass('treemapvis') ? container : container.find('.treemapvis')
+      var options = container.data('treemapOptions') || {}
       options.grouprank = $(this).val()
-      $('#treemap').data('treemapOptions', options)
-      rebuildTreemap()
+      container.data('treemapOptions', options)
+      rebuildTreemap({div: container})
     })
   })

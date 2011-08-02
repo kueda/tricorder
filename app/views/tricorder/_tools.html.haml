@@ -1,0 +1,14 @@
+- scaletoggle_id = "scaletoggle_#{serial_id}"
+- abundance_input ||= @abundance_input
+- if abundance_input
+  %span.scaletoggle.inlineblock{:id => scaletoggle_id, "data-url" => abundance_input.file.url}
+    %input{:type => "radio", :name => "scaletoggle", :id => "#{scaletoggle_id}_scaletoggle_on", :class => "scaletoggle_on", :checked => "checked"}
+    %label{:for => "#{scaletoggle_id}_scaletoggle_on"}
+      Scale by
+      = abundance_input.file_file_name
+    %input{:type => "radio", :id => "#{scaletoggle_id}_scaletoggle_off", :name => "scaletoggle", :class => "scaletoggle_off"}
+    %label{:for => "#{scaletoggle_id}_scaletoggle_off"} Scale by count
+.grouprankcontrol.inlineblock.ui-state-active.ui-button.ui-widget.ui-button-text-only.ui-corner-all
+  %span.ui-button-text
+    Group by
+    = select_tag :grouprank, options_for_select(%w(phylum class order family), :selected => "phylum")
