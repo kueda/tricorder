@@ -9,8 +9,9 @@ class ClassificationFlowTask < FlowTask
   end
   
   def run
-    fasta_input = inputs.detect{|i| i.file_file_name =~ /.fasta/}
-    abund_input = inputs.detect{|i| i.file_file_name =~ /.abund/}
+    unless fasta_input = inputs.detect{|i| i.file_file_name =~ /.fasta/}
+      raise "No FASTA file included!"
+    end
     rdp_outpath = File.join File.dirname(Tempfile.new('foo').path), "#{fasta_input.file_file_name}.rdp.tab"
 
     # run rdp classifier fasta
@@ -24,8 +25,6 @@ class ClassificationFlowTask < FlowTask
       rdp_json_file.write(rdp_to_json(rdp_outpath))
       self.outputs.create(:file => rdp_json_file)
     end
-    
-    # massage abundances into json
   end
   
   def rdp_to_json(path)

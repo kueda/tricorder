@@ -5,7 +5,12 @@
 - when "error"
   .error.status.ui-state-error.big.centered
     Something went wrong generating your file:
-    = @error_msg
+    - if Rails.env.development?
+      %pre{:style => "text-align: left"}
+        - @error_msg.split('\n').each do |l|
+          = l
+    - else
+      = @error_msg.split("\n").first
 - when "start", "working"
   .status.big.centered.anno
     %span.loading

@@ -69,9 +69,11 @@ class FlowTasksController < ApplicationController
     @job_id = Rails.cache.read(key)
     @job = Delayed::Job.find_by_id(@job_id)
     if @job_id
-      if @job && @job.failed_at
+      if @job && @job.last_error
         @status = "error"
         @error_msg = @job.last_error
+        @job.destroy
+        Rails.cache.delete(key)
       elsif @job
         @status = "working"
       else
