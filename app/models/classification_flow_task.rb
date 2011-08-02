@@ -3,19 +3,18 @@ class ClassificationFlowTask < FlowTask
   
   def to_param
     param = id.to_s
-    if fasta_input = inputs.detect{|i| i.file_file_name =~ /.fasta/}
+    if fasta_input = sequences_input
       param += "-#{fasta_input.file_file_name}"
     end
   end
   
   def run
-    unless fasta_input = inputs.detect{|i| i.file_file_name =~ /.fasta/}
-      raise "No FASTA file included!"
-    end
-    rdp_outpath = File.join File.dirname(Tempfile.new('foo').path), "#{fasta_input.file_file_name}.rdp.tab"
-
+    raise "No FASTA file included!" unless sequences_input
+    
+    rdp_outpath = File.join File.dirname(Tempfile.new('foo').path), "#{sequences_input.file_file_name}.rdp.tab"
+    
     # run rdp classifier fasta
-    run_command "java -Xmx1g -jar #{RDP_CLASSIFIER_PATH} -q #{fasta_input.file.path} -o #{rdp_outpath}"
+    run_command "java -Xmx1g -jar #{RDP_CLASSIFIER_PATH} -q #{sequences_input.file.path} -o #{rdp_outpath}"
     
     # create an output for the rdp results
     self.outputs.create(:file => open(rdp_outpath))
@@ -55,4 +54,17 @@ class ClassificationFlowTask < FlowTask
     end
     tree[:children].first.to_json
   end
+  
+  def sequences_input
+    inputs.detect{|i| i.file_file_name =~ /.fasta/ || i.extra == "sequences"}
+  end
+  
+  def abundances_input
+    inputs.detect{|i| i.id != sequences_input.try(:id).to_i }
+  end
+  
+  def rdp_output
+    outputs.detect{|i| i.file_file_name =~ /.rdp.json/}
+  end
+  
 end

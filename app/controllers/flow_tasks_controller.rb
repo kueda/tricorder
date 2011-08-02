@@ -17,6 +17,7 @@ class FlowTasksController < ApplicationController
     class_name = params.keys.detect{|k| k =~ /flow_task/}
     klass = class_name.camelize.constantize rescue FlowTask
     @flow_task = klass.new(params[class_name])
+    @flow_task.inputs.delete_if{|inp| !inp.file.file?}
     @flow_task.user = current_user
     if @flow_task.save
       flash[:notice] = "Task created"
