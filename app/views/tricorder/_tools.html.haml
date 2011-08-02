@@ -1,5 +1,5 @@
 - scaletoggle_id = "scaletoggle_#{serial_id}"
-- abundance_input ||= @abundance_input
+- abundance_input ||= nil
 - if abundance_input
   %span.scaletoggle.inlineblock{:id => scaletoggle_id, "data-url" => abundance_input.file.url}
     %input{:type => "radio", :name => "scaletoggle", :id => "#{scaletoggle_id}_scaletoggle_on", :class => "scaletoggle_on", :checked => "checked"}
