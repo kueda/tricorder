@@ -1,8 +1,28 @@
 class FlowTasksController < ApplicationController
-  before_filter :load_flow_task, :only => [:show, :destroy, :run]
+  before_filter :load_flow_task, :only => [:show, :destroy, :run, :comparisons]
+  before_filter :authenticate_user!
+  
+  PARTIALS = %w(recent user compare)
   
   def index
-    @flow_tasks = FlowTask.order("id desc").paginate(:page => params[:page])
+    @flow_task = FlowTask.find_by_id(params[:flow_task_id])
+    @flow_tasks = FlowTask.order("id desc").paginate(:page => params[:page], 
+      :per_page => get_per_page)
+    respond_to do |format|
+      format.html do
+        if params[:partial]
+          render_flow_task_partial
+          return
+        end
+      end
+    end
+  end
+  
+  def user
+    @flow_task = FlowTask.find_by_id(params[:flow_task_id])
+    @flow_tasks = current_user.flow_tasks.order("id desc").paginate(
+      :page => params[:page], :per_page => get_per_page)
+    render_flow_task_partial
   end
   
   def show
@@ -17,7 +37,7 @@ class FlowTasksController < ApplicationController
     class_name = params.keys.detect{|k| k =~ /flow_task/}
     klass = class_name.camelize.constantize rescue FlowTask
     @flow_task = klass.new(params[class_name])
-    @flow_task.inputs.delete_if{|inp| !inp.file.file?}
+    @flow_task.inputs.delete_if {|inp| !inp.file.file?}
     @flow_task.user = current_user
     if @flow_task.save
       flash[:notice] = "Task created"
@@ -88,4 +108,15 @@ class FlowTasksController < ApplicationController
     end
   end
   
+  def render_flow_task_partial
+    partial = params[:partial]
+    partial = "recent" unless PARTIALS.include?(partial)
+    render :partial => partial, :layout => false
+  end
+  
+  def get_per_page
+    per_page = (params[:per_page] || 10).to_i
+    per_page = 200 if per_page > 200
+    per_page
+  end
 end

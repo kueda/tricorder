@@ -1,0 +1,22 @@
+- flow_tasks ||= @flow_tasks
+- will_paginate_options ||= {}
+- will_paginate_options = {:controller => "flow_tasks", :action => "index", :id => nil, :per_page => flow_tasks.per_page}.merge(will_paginate_options)
+- if flow_tasks.total_entries == 0
+  No tasks to compare!
+- else
+  %ul.plain
+    .ui-helper-clearfix
+      - flow_tasks.in_groups(2).to_a.each_with_index do |recent_tasks, i|
+        %ul{:class => "plain left #{'last' if i == 2}"}
+          - for flow_task in recent_tasks.compact
+            %li.stacked
+              = link_to flow_task.to_param, compare_path(@flow_task.id, flow_task.id)
+              .small.meta
+                - if signed_in? && current_user.id == flow_task.user_id
+                  = flow_task.created_at.to_s(:long)
+                - else
+                  Run by
+                  = flow_task.user.try(:name)
+                  on
+                  = flow_task.created_at.to_s(:long)
+  = will_paginate(flow_tasks, :renderer => TricorderLinkRenderer, :params => will_paginate_options)

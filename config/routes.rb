@@ -1,17 +1,12 @@
 Tricorder::Application.routes.draw do
-    # Riparian routes
-  resources :flow_tasks do
-    member do
-      get :run
-    end
-  end
-
-
   get ":id", :to => "tricorder#index", :as => "task", :constraints => {:id => /\d+/}
   get ":id/compare/:other_id", :to => "tricorder#compare", :as => "compare", :constraints => {:id => /\d+/, :other_id => /\d+/}
 
-    # Riparian routes
-  resources :flow_tasks do
+  # Riparian routes
+  resources :flow_tasks, :constraints => {:id => /\d+/} do
+    collection do
+      get :user
+    end
     member do
       get :run
     end

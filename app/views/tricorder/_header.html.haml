@@ -17,7 +17,7 @@
           = link_to_function "upload", "tricorderDialog('#upload', {title: 'Upload FASTA'})"
         - if @flow_task
           %li
-            = link_to_function "compare", "$('#compare').dialog({title: 'Compare Tasks'})"
+            = link_to_function "compare", "tricorderDialog('#compare', {title: 'Compare with #{@flow_task.to_param}...'})"
         %li
           Welcome,
           = truncate (current_user.try(:name) || current_user.email).split.first, :lenght => 100
@@ -41,68 +41,40 @@
       = link_to provider, url, :class => "button"
 #upload.dialog
   = form_for ClassificationFlowTask.new, :url => flow_tasks_path, :html => {:multipart => true} do |f|
-    = f.fields_for :inputs, f.object.inputs.build do |fi|
-      <label for="fasta_file">FASTA</label>
-      = fi.file_field :file, :class => "stacked", :required => "true", :id => "fasta_file"
-      = fi.hidden_field :extra, :value => "sequences"
-    %p
+    .stacked
       = f.fields_for :inputs, f.object.inputs.build do |fi|
-        <label for="abundance_file">Abundances (optional)</label>
+        <label for="fasta_file">FASTA</label><br/>
+        = fi.file_field :file, :class => "stacked", :required => "true", :id => "fasta_file"
+        = fi.hidden_field :extra, :value => "sequences"
+    .stacked
+      = f.fields_for :inputs, f.object.inputs.build do |fi|
+        <label for="abundance_file">Abundances (optional)</label><br/>
         = fi.file_field :file, :class => "stacked", :id => "abundance_file"
         = fi.hidden_field :extra, :value => "abundances"
-        %span.small.meta
-          Tab-delimited file with SAMPLE and ABUNDANCE column. SAMPLE must
-          match the FASTA identifier exactly.
-
-
+      .small.meta
+        Tab-delimited file with SAMPLE and ABUNDANCE column. SAMPLE must
+        match the FASTA identifier exactly.
     .centered
       = f.submit "Visualize", :class => "button"
 
 #tasks.dialog
-  - if @user_tasks
-    %ul.plain
-      - for flow_task in @user_tasks
-        %li.stacked
-          = link_to flow_task.to_param, task_path(flow_task.id)
-          .small.meta
-            = flow_task.created_at.to_s(:long)
-            = link_to "Delete", flow_task_path(flow_task.id), :method => :delete, :confirm => "Are you sure?"
-  - else
-    You haven't run any tasks yet.  Try uploading something.
-#recent.dialog
-  - if @recent_tasks
-    %ul.plain
-      - for flow_task in @recent_tasks
-        %li.stacked
-          = link_to flow_task.to_param, task_path(flow_task.id)
-          .small.meta
-            Run by
-            = flow_task.user.try(:name)
-            on
-            = flow_task.created_at.to_s(:long)
-  - else
-    No one has run any tasks yet.  Try uploading something.
+  = render 'flow_tasks/user', :flow_tasks => @user_tasks
+
+#recent.dialog.wide
+  = render 'flow_tasks/recent', :flow_tasks => @recent_tasks
+
 
 - if @flow_task
   #compare.dialog
-    - if @user_tasks.blank? && @recent_tasks.blank?
-      No tasks to compare!
-    - if !@user_tasks.blank?
-      Your Tasks
-      %ul.plain
-        - for flow_task in @user_tasks
-          %li.stacked
-            = link_to flow_task.to_param, compare_path(@flow_task.id, flow_task.id)
-            .small.meta
-              = flow_task.created_at.to_s(:long)
-    - if !@recent_tasks.blank?
-      Recent Tasks
-      %ul.plain
-        - for flow_task in @recent_tasks
-          %li.stacked
-            = link_to flow_task.to_param, compare_path(@flow_task.id, flow_task.id)
-            .small.meta
-              Run by
-              = flow_task.user.try(:name)
-              on
-              = flow_task.created_at.to_s(:long)
+    .tabs
+      %ul
+        %li
+          = link_to "#compare_your_tasks" do
+            %span Your Tasks
+        %li
+          = link_to "#compare_recent_tasks" do
+            %span Recent Tasks
+      #compare_your_tasks
+        = render 'flow_tasks/compare', :flow_tasks => @user_tasks, :will_paginate_options => {:action => "user", :partial => "compare", :flow_task_id => @flow_task.id}
+      #compare_recent_tasks
+        = render 'flow_tasks/compare', :flow_tasks => @recent_tasks, :will_paginate_options => {:partial => "compare", :flow_task_id => @flow_task.id}

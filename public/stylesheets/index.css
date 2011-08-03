@@ -9,6 +9,7 @@ a:hover, a:active { color: #E5E84B; }
 #header .menu li { display: inline-block; margin-left: 10px; margin-top: 15px;}
 .right { float: right; margin-left: 10px; }
 .left { float: left; margin-right: 10px; }
+.left.last { margin-right: 0; }
 .stacked { margin-bottom: 10px; }
 
 input[type=file] { color: #aaa; max-width: 250px; }
@@ -45,3 +46,7 @@ ul.plain li { padding: 0; }
 .treemap.ui-widget .ui-widget-header {
   padding: .4em 1em;
 }
+
+#new_classification_flow_task, .dialog.wide ul { width: 300px; }
+#compare.dialog {padding: 0;}
+#compare.dialog .ui-tabs { padding-left: 0; padding-right: 0; }

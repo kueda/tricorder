@@ -1,7 +1,26 @@
 $(document).ready(function() {
   $('.button').button()
   $('.dialog').hide()
+  $('.dialog .pagination a').click(ajaxifyPaginationLink)
+  $('.tabs').each(function() {
+    var tabs = $(this).find('ul li'), selected = 0
+    for (var i=0; i < tabs.length; i++) {
+      if ($(tabs[i]).hasClass('selected')) { selected = i; break; } // select tabs with "selected" clas
+      if ($(tabs[i]).find('a[href='+window.location.hash+']').length > 0) {selected = i; break;}; // select tab specified in URL anchor
+    }
+    $(this).tabs({selected: selected});
+  })
 });
+
+function ajaxifyPaginationLink() {
+  var parent = $(this).parents('.pagination').parent(),
+      url = $(this).attr('href');
+  if (!url.match(/partial=\w+/)) { url += '&partial=true' };
+  $(parent).load(url, function() {
+    $(this).find('.pagination a').click(ajaxifyPaginationLink)
+  })
+  return false
+}
 
 $('.dialog').live('dialogopen', function() {
   $('#main').dim()
@@ -383,7 +402,7 @@ function cell() {
 }
 
 function tricorderDialog(selector, options) {
-  options = options || {}
+  options = $.extend({}, options, {width: 'auto'})
   $('.dialog').dialog('close')
   $(selector).dialog(options)
 }
@@ -423,3 +442,4 @@ function buildScaleToggles(options) {
     })
   })
 }
+

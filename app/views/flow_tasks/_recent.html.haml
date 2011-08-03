@@ -1,0 +1,16 @@
+- flow_tasks ||= @flow_tasks
+- if flow_tasks
+  .ui-helper-clearfix
+    - flow_tasks.in_groups(2).to_a.each_with_index do |recent_tasks, i|
+      %ul{:class => "plain left #{'last' if i == 2}"}
+        - for flow_task in recent_tasks.compact
+          %li.stacked
+            = link_to flow_task.to_param, task_path(flow_task.id)
+            .small.meta
+              Run by
+              = flow_task.user.try(:name)
+              on
+              = flow_task.created_at.to_s(:long)
+  = will_paginate(flow_tasks, :renderer => TricorderLinkRenderer, :params => {:controller => "flow_tasks", :action => "index", :per_page => flow_tasks.per_page, :id => nil})
+- else
+  No one has run any tasks yet.  Try uploading something.
