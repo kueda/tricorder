@@ -47,6 +47,8 @@ ul.plain li { padding: 0; }
   padding: .4em 1em;
 }
 
+.dialog.wide .ui-helper-clearfix { min-width: 655px; }
 #new_classification_flow_task, .dialog.wide ul { width: 300px; }
-#compare.dialog {padding: 0;}
+#compare.dialog {padding: 0; min-width: 668px;}
 #compare.dialog .ui-tabs { padding-left: 0; padding-right: 0; }
+#compare.dialog .ui-tabs .ui-tabs-panel { padding: 0 10px; }

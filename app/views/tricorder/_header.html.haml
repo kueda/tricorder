@@ -57,7 +57,7 @@
     .centered
       = f.submit "Visualize", :class => "button"
 
-#tasks.dialog
+#tasks.dialog.wide
   = render 'flow_tasks/user', :flow_tasks => @user_tasks
 
 #recent.dialog.wide
@@ -65,7 +65,7 @@
 
 
 - if @flow_task
-  #compare.dialog
+  #compare.dialog.wide
     .tabs
       %ul
         %li
