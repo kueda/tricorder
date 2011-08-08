@@ -55,7 +55,7 @@
         Tab-delimited file with SAMPLE and ABUNDANCE column. SAMPLE must
         match the FASTA identifier exactly.
     .centered
-      = f.submit "Visualize", :class => "button"
+      = f.submit "Visualize", :class => "button", "data-loading-click" => "Processing..."
 
 #tasks.dialog.wide
   = render 'flow_tasks/user', :flow_tasks => @user_tasks

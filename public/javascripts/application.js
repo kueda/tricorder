@@ -443,3 +443,19 @@ function buildScaleToggles(options) {
   })
 }
 
+$('[data-loading-click]').live('click', function() {
+  var button = this
+  var label = $.trim($(this).attr('data-loading-click'))
+  if ($.trim($(this).attr('data-loading-click')) == 'true') { var label = 'Loading...' }
+  var loading = $('<span></span>').html(label).addClass('loading').addClass($(this).attr('class'))
+  $(this).hide().before(loading)
+  
+  // bind ajax success to restore the button
+  if (!$(this).attr('data-loading-click-bound')) {
+    $(this).parents('form').bind('ajax:success', function() {
+      $(this).find('.loading').remove()
+      $(button).show()
+    })
+    $(this).attr('data-loading-click-bound', true)
+  }
+})
