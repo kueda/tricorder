@@ -1,7 +1,9 @@
-- flow_tasks ||= @flow_tasks
+- flow_tasks ||= @flow_tasks || []
 - will_paginate_options ||= {}
-- will_paginate_options = {:controller => "flow_tasks", :action => "index", :id => nil, :per_page => flow_tasks.per_page}.merge(will_paginate_options)
-- if flow_tasks.total_entries == 0
+- per_page = flow_tasks.respond_to?(:per_page) ? flow_tasks.per_page : 10
+- total_entries = flow_tasks.respond_to?(:total_entries) ? flow_tasks.total_entries : flow_tasks.size
+- will_paginate_options = {:controller => "flow_tasks", :action => "index", :id => nil, :per_page => per_page}.merge(will_paginate_options)
+- if total_entries == 0
   No tasks to compare!
 - else
   %ul.plain
@@ -20,3 +22,4 @@
                   on
                   = flow_task.created_at.to_s(:long)
   = will_paginate(flow_tasks, :renderer => TricorderLinkRenderer, :params => will_paginate_options)
+  &nbsp;

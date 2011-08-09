@@ -57,6 +57,7 @@ class FlowTasksController < ApplicationController
   end
   
   def run
+    @json_url = "#{root_path}demo.json"
     delayed_progress(request.path) do
       @job = Delayed::Job.enqueue(@flow_task)
     end

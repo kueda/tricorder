@@ -15,6 +15,7 @@ a:hover, a:active { color: #E5E84B; }
 input[type=file] { color: #aaa; max-width: 250px; }
 .centered { text-align: center; }
 .centered * { display: inline-block; }
+.big { font-size: larger; }
 .small { font-size: smaller; }
 .meta { color: #888; }
 ul.plain { padding: 0; list-style: none; }
@@ -52,3 +53,18 @@ ul.plain li { padding: 0; }
 #compare.dialog {padding: 0; min-width: 668px;}
 #compare.dialog .ui-tabs { padding-left: 0; padding-right: 0; }
 #compare.dialog .ui-tabs .ui-tabs-panel { padding: 0 10px; }
+
+.loading {
+  padding-left: 20px;
+  color: #777;
+  display: inline-block;
+  background: url(/images/loading-white.gif) no-repeat center left;
+  vertical-align: middle;
+  min-height: 16px;
+  line-height: 1;
+}
+.ui-button.loading { 
+  padding: 0.4em 1em 0.4em 2.1em;
+  background: #CC6 url(/images/loading-white.gif) no-repeat 5px center;
+}
+#progress { padding: 10px; background-color: #333;  width: 50%; }

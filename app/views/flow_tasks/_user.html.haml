@@ -10,5 +10,6 @@
               = flow_task.created_at.to_s(:long)
               = link_to "Delete", flow_task_path(flow_task.id), :method => :delete, :confirm => "Are you sure?"
   = will_paginate(flow_tasks, :renderer => TricorderLinkRenderer, :params => {:controller => "flow_tasks", :action => "user", :per_page => flow_tasks.per_page, :id => nil})
+  &nbsp;
 - else
   You haven't run any tasks yet.  Try uploading something.

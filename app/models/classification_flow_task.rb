@@ -10,7 +10,7 @@ class ClassificationFlowTask < FlowTask
   
   def run
     raise "No FASTA file included!" unless sequences_input
-    
+    outputs.delete_all
     rdp_outpath = File.join File.dirname(Tempfile.new('foo').path), "#{sequences_input.file_file_name}.rdp.tab"
     
     # run rdp classifier fasta

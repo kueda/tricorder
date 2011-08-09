@@ -1,4 +1,11 @@
-%h1
-  Running
-  = @flow_task.class.name.underscore.humanize
-= render :partial => "delayed_progress", :locals => {:redirect_url => flow_task_redirect_url(@flow_task)}
+#bg
+  = render 'tricorder/header'
+#progress.ui-widget.ui-corner-all
+  = render :partial => "delayed_progress", :locals => {:redirect_url => flow_task_redirect_url(@flow_task), :loading => "Classifying..."}
+    
+:javascript
+  $(document).ready(function() {
+    $('#bg').dim()
+    $('#progress').position({my: 'center', at: 'center', of: document})
+  })
+
