@@ -1,13 +1,12 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.9'
+gem 'rails'
 gem 'sqlite3'
-gem 'mysql2', '< 0.3'
 gem "haml"
 gem "haml-rails"
 gem "omniauth"
 gem "oa-openid"
 gem "will_paginate", "~> 3.0.pre4"
 gem 'delayed_job'
-gem 'riparian' , :git => 'git://whewellite.berkeley.edu/var/git/riparian'
+gem 'riparian' , :git => 'git://github.com/kueda/riparian.git'
 gem 'fastercsv'
